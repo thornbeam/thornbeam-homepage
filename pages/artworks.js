@@ -18,6 +18,7 @@ import LinkItem from "../components/linkItem";
 import ImageContainer from "../components/imageContainer";
 
 import SlideshowTest from "../components/slideshow-test"
+import Slideshow from "../components/slideshow"
 
 export default function Artworks() {
   return (
@@ -53,6 +54,7 @@ export default function Artworks() {
         BJT 2020, 50 * 50cm
       </ImageContainer>
       <SlideshowTest />
+      <Slideshow />
     </Article>
   );
 }
