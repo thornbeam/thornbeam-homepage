@@ -16,8 +16,8 @@ import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ImageContainer from "../components/imageContainer";
-import ImageContainerModal from "../components/imageContainerModal"
-import Slideshow from "../components/slideshow"
+
+import SlideshowTest from "../components/slideshow-test"
 
 export default function Artworks() {
   return (
@@ -52,16 +52,7 @@ export default function Artworks() {
       <ImageContainer src="/artworks/2020-bjt.png" maxW="40%" maxH="40vh">
         BJT 2020, 50 * 50cm
       </ImageContainer>
-      <ImageContainerModal src="/artworks/2020-bjt.png" maxW="40%" maxH="40vh">
-        BJT 2020, 50 * 50cm
-      </ImageContainerModal>
-      <ImageContainerModal src="/artworks/2021-skull.png" maxW="100%" maxH="50vh">
-        Skull 2021, 100 * 130cm
-      </ImageContainerModal>
-      <ImageContainerModal src="/artworks/2021-bang_01.png" maxW="80%" maxH="60vh">
-        Bang (part 1) 2021, 130 * 100cm
-      </ImageContainerModal>
-      <Slideshow></Slideshow>
+      <SlideshowTest />
     </Article>
   );
 }
