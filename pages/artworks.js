@@ -17,6 +17,7 @@ import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ImageContainer from "../components/imageContainer";
 import ImageContainerModal from "../components/imageContainerModal"
+import Slideshow from "../components/slideshow"
 
 export default function Artworks() {
   return (
@@ -60,6 +61,7 @@ export default function Artworks() {
       <ImageContainerModal src="/artworks/2021-bang_01.png" maxW="80%" maxH="60vh">
         Bang (part 1) 2021, 130 * 100cm
       </ImageContainerModal>
+      <Slideshow></Slideshow>
     </Article>
   );
 }
