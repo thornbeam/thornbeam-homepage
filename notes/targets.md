@@ -17,3 +17,6 @@ title: Targets
 * Use functions of React like useState()
 * Set an array of all images with label and path
 * Iterate in this array with modal window
+
+# Note on 2022-12-15
+* Recap slideshow in React!
