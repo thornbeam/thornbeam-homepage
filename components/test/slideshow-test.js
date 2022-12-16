@@ -45,7 +45,8 @@ const Slideshow = ({ images = [], children }) => {
   return (
     <>
       <Box onClick={onOpen}>
-        Click me
+        <Image src={images[currentSlide]}></Image>
+        {children}
       </Box>
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
         <ModalOverlay />

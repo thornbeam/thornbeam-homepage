@@ -17,8 +17,10 @@ import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ImageContainer from "../components/imageContainer";
 
-import SlideshowTest from "../components/slideshow-test"
-import Slideshow from "../components/slideshow"
+import ImageContainerModal from "../components/test/imageContainerModal";
+
+import SlideshowForLoop from "../components/test/slideshow-forloop";
+import SlideshowTest from "../components/test/slideshow-test.js";
 
 export default function Artworks() {
   return (
@@ -53,8 +55,12 @@ export default function Artworks() {
       <ImageContainer src="/artworks/2020-bjt.png" maxW="40%" maxH="40vh">
         BJT 2020, 50 * 50cm
       </ImageContainer>
-      <SlideshowTest />
-      <Slideshow />
+      <SlideshowForLoop>SlideshowForLoop</SlideshowForLoop>
+      <SlideshowTest>SlideshowTest</SlideshowTest>
+
+      <ImageContainerModal src="/artworks/2020-bjt.png" maxW="40%" maxH="40vh">
+        ImageContainerModal
+      </ImageContainerModal>
     </Article>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Button, Image } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,
@@ -10,7 +10,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const Slideshow = () => {
+const Slideshow = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const sources = [
@@ -33,6 +33,7 @@ const Slideshow = () => {
       <>
         <Box onClick={onOpen}>
           <Image src={sources[i]} />
+          <Text>{children}</Text>
         </Box>
         <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
           <ModalOverlay />
@@ -61,7 +62,7 @@ const Slideshow = () => {
     images.push(image);
   }
 
-  return <Box>Slideshow {images}</Box>;
+  return <Box>{images}</Box>;
 };
 
 export default Slideshow;
