@@ -45,7 +45,7 @@ const Navbar = (props) => {
         >
           <LinkItem href="/">Home</LinkItem>
           <LinkItem href="/artworks">Artworks</LinkItem>
-          <LinkItem href="/webpages">Webpages</LinkItem>
+          <LinkItem href="/webpages">Source</LinkItem>
           <LinkItem href="https://github.com/thornbeam">GitHub</LinkItem>
           <LinkItem href="/about">About</LinkItem>
         </Stack>

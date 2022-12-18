@@ -66,7 +66,7 @@ export default function Home() {
       </Box>
       <ContentTitle>Works</ContentTitle>
       <Container maxW="container.sm" mb={12}>
-        <Image src="/artworks/2020-union_spiel-v1.jpg" />
+        <Image src="/artworks/jpg/2020-union_spiel-v1.jpg" />
       </Container>
       <ContentText fontFamily="Roboto Slab, serif" fontStyle="italic">
         Hidetoshi Mitsuzaki (geb. 1989) greift in seiner Malerei Symbole,

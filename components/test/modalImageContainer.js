@@ -1,4 +1,4 @@
-import { Box, Container, Text, Image } from "@chakra-ui/react";
+import { Box, Container, Text, Image, useColorModeValue } from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,
@@ -30,7 +30,7 @@ const ModalImageContainer = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Container mt={32} {...props}>
+    <Container mt={{ base: 24, md: 32 }} maxW="container.sm" {...props}>
       <Box display="flex" flexDirection="column" alignItems="left">
         <Box onClick={onOpen} cursor="pointer">
           <Modal
@@ -40,7 +40,7 @@ const ModalImageContainer = ({
             motionPreset="scale"
             size="full"
           >
-            <ModalOverlay bg="none" backdropFilter="auto" backdropBlur="2px" />
+            <ModalOverlay />
             <ModalContent>
               <ModalCloseButton />
               <ModalBody
@@ -50,6 +50,11 @@ const ModalImageContainer = ({
               >
                 {ModalImage(id, src)}
               </ModalBody>
+              <ModalFooter>
+                <Text fontSize="0.9rem" fontStyle="italic">
+                  {children}
+                </Text>
+              </ModalFooter>
             </ModalContent>
           </Modal>
 

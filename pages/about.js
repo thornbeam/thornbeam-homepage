@@ -18,17 +18,16 @@ import LinkItem from "../components/linkItem";
 import BioContent from "../components/bioContent";
 
 const ColorBox = ({ ...props }) => {
-  return <Box h="32px" w="32px" {...props}></Box>;
+  return <Box h={50} w={80} {...props}></Box>;
 };
 
 export default function About() {
   return (
     <Article>
-      <Container maxW="container.sm" mt={12}>
+      <Container maxW="container.sm" mt={20} >
         <Box
           display="flex"
-          border="1px"
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection="row"
           justifyContent="center"
         >
           <ColorBox bg="base03"></ColorBox>
