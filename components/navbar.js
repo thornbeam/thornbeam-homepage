@@ -17,7 +17,7 @@ import MenuLinkItem from "../components/menuLinkItem";
 import Logo from "./logo";
 import ToggleButton from "./toggleButton";
 
-const Navbar = (props) => {
+const Navbar = (...props) => {
   return (
     <Box
       position="fixed"

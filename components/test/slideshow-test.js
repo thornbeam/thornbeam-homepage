@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Button, Image } from "@chakra-ui/react";
+import { Box, Button, Container, Image, Text } from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,
@@ -44,10 +44,16 @@ const Slideshow = ({ images = [], children }) => {
 
   return (
     <>
-      <Box onClick={onOpen}>
-        <Image src={images[currentSlide]}></Image>
+      <Container maxW="container.sm" mt={{ base: 24, md: 32 }}>
+        <Image
+          onClick={onOpen}
+          cursor="pointer"
+          src={images[currentSlide]}
+          maxW="90%"
+          maxH="50vh"
+        />
         {children}
-      </Box>
+      </Container>
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
         <ModalOverlay />
         <ModalContent>

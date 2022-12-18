@@ -15,8 +15,9 @@ import {
 import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
-
 import ModalImageContainer from "../components/test/modalImageContainer";
+
+import Slideshow from "../components/test/slideshow-test.js"
 
 export default function Artworks() {
   return (
@@ -80,10 +81,11 @@ export default function Artworks() {
       >
         Advertisement 2020, 50 × 50 cm
       </ModalImageContainer>
-      <ModalImageContainer 
-        src="/artworks/jpg/2020-abd.jpg" 
-        maxW="60%" 
-        maxH="60vh">
+      <ModalImageContainer
+        src="/artworks/jpg/2020-abd.jpg"
+        maxW="60%"
+        maxH="60vh"
+      >
         A.B.D**** 2020, 180 × 130 cm
       </ModalImageContainer>
       <ModalImageContainer
@@ -100,6 +102,8 @@ export default function Artworks() {
       >
         Eurofighter (part2) 2020, 105 × 155 cm
       </ModalImageContainer>
+
+      <Slideshow></Slideshow>
     </Article>
   );
 }
