@@ -20,3 +20,6 @@ title: Targets
 
 # Note on 2022-12-15
 * Recap slideshow in React!
+    
+# Note on 2022-12-18
+* Use temporarily ImageContainerModal instead of creating modalSlide
