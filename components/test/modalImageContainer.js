@@ -11,7 +11,22 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const ImageContainerModal = ({ src, maxH, maxW, children, ...props }) => {
+function ModalImage(id, src) {
+  if (id === "small") {
+    return <Image src={src} width="50%" height="50vh" fit="contain" />;
+  } else {
+    return <Image src={src} width="90%" height="80vh" fit="contain" />;
+  }
+}
+
+const ModalImageContainer = ({
+  id = "",
+  src,
+  maxH,
+  maxW,
+  children,
+  ...props
+}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -21,7 +36,6 @@ const ImageContainerModal = ({ src, maxH, maxW, children, ...props }) => {
           <Modal
             isOpen={isOpen}
             onClose={onClose}
-            blockScrollOnMount={false}
             isCentered
             motionPreset="scale"
             size="full"
@@ -29,8 +43,12 @@ const ImageContainerModal = ({ src, maxH, maxW, children, ...props }) => {
             <ModalOverlay bg="none" backdropFilter="auto" backdropBlur="2px" />
             <ModalContent>
               <ModalCloseButton />
-              <ModalBody>
-                <Image src={src} width="90%" height="80vh" fit="contain"/>
+              <ModalBody
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                {ModalImage(id, src)}
               </ModalBody>
             </ModalContent>
           </Modal>
@@ -53,4 +71,4 @@ const ImageContainerModal = ({ src, maxH, maxW, children, ...props }) => {
   );
 };
 
-export default ImageContainerModal;
+export default ModalImageContainer;
