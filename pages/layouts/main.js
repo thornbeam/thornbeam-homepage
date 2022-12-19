@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../../components/navbar";
-import Fotter from "../../components/footer";
+import Footer from "../../components/footer";
 
 // Defines:
 // * Global information of this website
@@ -22,7 +22,7 @@ const Global = ({ children }) => {
       <Navbar />
       <Container position="relative" top={70} maxW="container.md">
         {children}
-        <Fotter></Fotter>
+        <Footer></Footer>
       </Container>
     </Box>
   );

@@ -17,7 +17,7 @@ import MenuLinkItem from "../components/menuLinkItem";
 import Logo from "./logo";
 import ToggleButton from "./toggleButton";
 
-const Navbar = (...props) => {
+const Navbar = () => {
   return (
     <Box
       position="fixed"
@@ -27,7 +27,6 @@ const Navbar = (...props) => {
       py={3}
       style={{ backdropFilter: "blur(20px)" }}
       zIndex={1}
-      {...props}
     >
       <Container
         maxW="container.lg"

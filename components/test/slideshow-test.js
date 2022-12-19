@@ -47,7 +47,6 @@ const Slideshow = ({ images = [], children }) => {
       <Container maxW="container.sm" mt={{ base: 24, md: 32 }}>
         <Image
           onClick={onOpen}
-          cursor="pointer"
           src={images[currentSlide]}
           maxW="90%"
           maxH="50vh"

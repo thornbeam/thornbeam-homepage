@@ -1,5 +1,5 @@
-import FramerMotionTest from "../components/framerMotionTest.js"
-import FramerMotionTestV2 from "../components/framerMotionTestV2.js"
+import FramerMotionTest from "../components/test/framerMotionTest.js"
+import FramerMotionTestV2 from "../components/test/framerMotionTestV2.js"
 const Test = () => {
   return (
     <div>

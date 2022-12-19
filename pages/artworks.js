@@ -19,6 +19,8 @@ import ModalImageContainer from "../components/test/modalImageContainer";
 
 import Slideshow from "../components/test/slideshow-test.js"
 
+import BlurTest from "../components/test/blurTest.js"
+
 export default function Artworks() {
   return (
     <Article title="Artworks">
@@ -103,7 +105,9 @@ export default function Artworks() {
         Eurofighter (part2) 2020, 105 × 155 cm
       </ModalImageContainer>
 
-      <Slideshow></Slideshow>
+      <Slideshow>Exhibition's Slide Test</Slideshow>
+
+      <BlurTest></BlurTest>
     </Article>
   );
 }
