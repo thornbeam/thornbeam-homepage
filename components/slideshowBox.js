@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { Box, Button, Container, Image, Text } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Button,
+  Container,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Modal,
@@ -45,25 +52,27 @@ const SlideshowBox = ({ children }) => {
   return (
     <>
       <Container maxW="container.sm">
-        <Box
-          border="1px"
-          onClick={onOpen}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          fontWeight="bold"
-          boxSize="container.sm"
-          bgImage={images[currentSlide]}
-          bgPosition="center"
-          bgRepeat="no-repeat"
-          bgSize="contain"
-          cursor="pointer"
-          filter="grayscale(90%)"
-          _hover={{ filter: "none" }}
-          transition="filter 0.3s"
-        >
-          {children}
-        </Box>
+        <AspectRatio maxW="100%" ratio={4 / 3}>
+          <Box
+            onClick={onOpen}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            fontWeight="bold"
+            bgImage={images[currentSlide]}
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+            textTransform="uppercase"
+            letterSpacing="1px"
+            cursor="pointer"
+            filter="grayscale(90%)"
+            _hover={{ filter: "none" }}
+            transition="filter 0.3s"
+          >
+            {children}
+          </Box>
+        </AspectRatio>
       </Container>
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
         <ModalOverlay />

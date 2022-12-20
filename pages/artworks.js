@@ -15,9 +15,8 @@ import {
 import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
-import ModalImageContainer from "../components/test/modalImageContainer";
-import SlideshowBox from "../components/test/slideshowBox.js";
-import SlideshowImage from "../components/test/slideshowImage"
+import ModalImageContainer from "../components/modalImageContainer";
+import SlideshowBox from "../components/slideshowBox"
 
 export default function Artworks() {
   return (
@@ -104,8 +103,7 @@ export default function Artworks() {
       </ModalImageContainer>
 
       <ContentTitle>Exhibitions</ContentTitle>
-      <SlideshowBox>SlideshowBoxTest</SlideshowBox>
-      <SlideshowImage>SlideshowImage</SlideshowImage>
+      <SlideshowBox>Union/SPIEL</SlideshowBox>
     </Article>
   );
 }
