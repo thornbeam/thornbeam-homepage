@@ -16,10 +16,7 @@ import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ModalImageContainer from "../components/test/modalImageContainer";
-
-import Slideshow from "../components/test/slideshow-test.js"
-
-import BlurTest from "../components/test/blurTest.js"
+import Slideshow from "../components/test/slideshow.js";
 
 export default function Artworks() {
   return (
@@ -105,9 +102,8 @@ export default function Artworks() {
         Eurofighter (part2) 2020, 105 × 155 cm
       </ModalImageContainer>
 
-      <Slideshow>Exhibition's Slide Test</Slideshow>
-
-      <BlurTest></BlurTest>
+      <ContentTitle>Exhibitions</ContentTitle>
+      <Slideshow>ExhibitionTest</Slideshow>
     </Article>
   );
 }
