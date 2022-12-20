@@ -12,7 +12,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const Slideshow = ({ children }) => {
+const SlideshowBox = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
@@ -41,8 +41,6 @@ const Slideshow = ({ children }) => {
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  // By using Box instead of Image, you can't fit the box size to the actual image size, sothat no sence to use Box instead of Image except on the point, that you can use the text message on the picture!
 
   return (
     <>
@@ -115,4 +113,4 @@ const Slideshow = ({ children }) => {
   );
 };
 
-export default Slideshow;
+export default SlideshowBox;
