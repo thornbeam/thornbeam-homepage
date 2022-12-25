@@ -20,7 +20,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-import images from "./image_urls/unionSpiel"
+import images from "./image_urls/unionSpiel";
 
 const SlideshowBox = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -69,9 +69,20 @@ const SlideshowBox = ({ children }) => {
           </Box>
         </AspectRatio>
       </Container>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        isCentered
+        size="full"
+        blockScrollOnMount={false}
+      >
         <ModalOverlay />
-        <ModalContent bg={useColorModeValue("white", "base03")}>
+        <ModalContent
+          bg={useColorModeValue("blackAlpha.400", "whiteAlpha.200")}
+          color={useColorModeValue("whiteAlpha.900", "whiteAlpha.900")}
+          backdropFilter="auto"
+          backdropBlur="7px"
+        >
           <ModalCloseButton />
           <ModalBody display="flex" justifyContent="center" alignItems="center">
             <Box
@@ -88,8 +99,8 @@ const SlideshowBox = ({ children }) => {
                 h={7}
                 onClick={previous}
                 cursor="pointer"
-                color="gray"
-                _hover={{ color: useColorModeValue("base03", "white") }}
+                color="whiteAlpha.600"
+                _hover={{ color: "whiteAlpha.900" }}
               />
               <Image
                 src={images[currentSlide]}
@@ -106,8 +117,8 @@ const SlideshowBox = ({ children }) => {
                 h={7}
                 onClick={next}
                 cursor="pointer"
-                color="gray"
-                _hover={{ color: useColorModeValue("base03", "white") }}
+                color="whiteAlpha.600"
+                _hover={{ color: "whiteAlpha.900" }}
               />
             </Box>
           </ModalBody>

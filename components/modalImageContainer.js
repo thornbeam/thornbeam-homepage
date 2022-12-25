@@ -1,4 +1,10 @@
-import { Box, Container, Text, Image, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Text,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,
@@ -32,46 +38,51 @@ const ModalImageContainer = ({
   return (
     <Container mt={{ base: 24, md: 32 }} maxW="container.sm" {...props}>
       <Box display="flex" flexDirection="column" alignItems="left">
-        <Box onClick={onOpen} cursor="pointer">
-          <Modal
-            isOpen={isOpen}
-            onClose={onClose}
-            isCentered
-            motionPreset="scale"
-            size="full"
+        {maxH && maxW && (
+          <Image
+            onClick={onOpen}
+            cursor="pointer"
+            src={src}
+            maxH={maxH}
+            maxW={maxW}
+            fit="contain"
+            align="left"
+          />
+        )}
+        <Modal
+          isOpen={isOpen}
+          onClose={onClose}
+          isCentered
+          motionPreset="scale"
+          size="full"
+          blockScrollOnMount={false}
+        >
+          <ModalOverlay />
+          <ModalContent
+            bg={useColorModeValue("blackAlpha.400", "whiteAlpha.200")}
+            color={useColorModeValue("whiteAlpha.900", "whiteAlpha.900")}
+            backdropFilter="auto"
+            backdropBlur="7px"
           >
-            <ModalOverlay />
-            <ModalContent bg={useColorModeValue("white", "base03")}>
-              <ModalCloseButton />
-              <ModalBody
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-              >
-                {ModalImage(id, src)}
-              </ModalBody>
-              <ModalFooter>
-                <Text fontSize="0.9rem" fontStyle="italic">
-                  {children}
-                </Text>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
-
-          {maxH && maxW && (
-            <Image
-              src={src}
-              maxH={maxH}
-              maxW={maxW}
-              fit="contain"
-              align="left"
-            />
-          )}
-        </Box>
-        <Text mt={5} fontSize="0.9rem" fontStyle="italic">
-          {children}
-        </Text>
+            <ModalCloseButton />
+            <ModalBody
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              {ModalImage(id, src)}
+            </ModalBody>
+            <ModalFooter>
+              <Text fontSize="0.9rem" fontStyle="italic">
+                {children}
+              </Text>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Box>
+      <Text mt={5} fontSize="0.9rem" fontStyle="italic">
+        {children}
+      </Text>
     </Container>
   );
 };
