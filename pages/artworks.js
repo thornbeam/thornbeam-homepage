@@ -16,7 +16,7 @@ import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ModalImageContainer from "../components/modalImageContainer";
-import SlideshowBox from "../components/slideshowBox"
+import SlideshowUnionSpiel from "../components/slideshowUnionSpiel"
 
 export default function Artworks() {
   return (
@@ -103,7 +103,7 @@ export default function Artworks() {
       </ModalImageContainer>
 
       <ContentTitle>Exhibitions</ContentTitle>
-      <SlideshowBox>Union/SPIEL</SlideshowBox>
+      <SlideshowUnionSpiel>Union/SPIEL</SlideshowUnionSpiel>
     </Article>
   );
 }
