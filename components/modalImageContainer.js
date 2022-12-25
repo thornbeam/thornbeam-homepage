@@ -41,7 +41,7 @@ const ModalImageContainer = ({
             size="full"
           >
             <ModalOverlay />
-            <ModalContent>
+            <ModalContent bg={useColorModeValue("white", "base03")}>
               <ModalCloseButton />
               <ModalBody
                 display="flex"

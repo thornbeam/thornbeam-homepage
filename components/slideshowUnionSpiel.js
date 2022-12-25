@@ -6,6 +6,7 @@ import {
   Container,
   Image,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import {
@@ -52,6 +53,7 @@ const SlideshowBox = ({ children }) => {
             justifyContent="center"
             alignItems="center"
             fontWeight="bold"
+            color="base03"
             bgImage={images[currentSlide]}
             bgPosition="center"
             bgRepeat="no-repeat"
@@ -69,7 +71,7 @@ const SlideshowBox = ({ children }) => {
       </Container>
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent bg={useColorModeValue("white", "base03")}>
           <ModalCloseButton />
           <ModalBody display="flex" justifyContent="center" alignItems="center">
             <Box
@@ -87,7 +89,7 @@ const SlideshowBox = ({ children }) => {
                 onClick={previous}
                 cursor="pointer"
                 color="gray"
-                _hover={{ color: "black" }}
+                _hover={{ color: useColorModeValue("base03", "white") }}
               />
               <Image
                 src={images[currentSlide]}
@@ -105,7 +107,7 @@ const SlideshowBox = ({ children }) => {
                 onClick={next}
                 cursor="pointer"
                 color="gray"
-                _hover={{ color: "black" }}
+                _hover={{ color: useColorModeValue("base03", "white") }}
               />
             </Box>
           </ModalBody>
