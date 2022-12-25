@@ -6,6 +6,7 @@ import {
   Container,
   Image,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import {
@@ -19,17 +20,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const SlideshowBox = ({ children }) => {
+const SlideshowBox = ({ images, children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const images = [
-    "/artworks/graduate_exhibition/2021-abschluss_web-01.jpg",
-    "/artworks/graduate_exhibition/2021-abschluss_web-02.jpg",
-    "/artworks/graduate_exhibition/2021-abschluss_web-03.jpg",
-    "/artworks/graduate_exhibition/2021-abschluss_web-04.jpg",
-    "/artworks/graduate_exhibition/2021-abschluss_web-05.jpg",
-    "/artworks/graduate_exhibition/2021-abschluss_web-06.jpg",
-  ];
 
   function previous() {
     if (currentSlide > 0) {
@@ -59,6 +51,7 @@ const SlideshowBox = ({ children }) => {
             justifyContent="center"
             alignItems="center"
             fontWeight="bold"
+            color="base03"
             bgImage={images[currentSlide]}
             bgPosition="center"
             bgRepeat="no-repeat"
@@ -74,9 +67,20 @@ const SlideshowBox = ({ children }) => {
           </Box>
         </AspectRatio>
       </Container>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        isCentered
+        size="full"
+        blockScrollOnMount={false}
+      >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent
+          bg={useColorModeValue("blackAlpha.400", "whiteAlpha.200")}
+          color={useColorModeValue("whiteAlpha.900", "whiteAlpha.900")}
+          backdropFilter="auto"
+          backdropBlur="7px"
+        >
           <ModalCloseButton />
           <ModalBody display="flex" justifyContent="center" alignItems="center">
             <Box
@@ -93,8 +97,8 @@ const SlideshowBox = ({ children }) => {
                 h={7}
                 onClick={previous}
                 cursor="pointer"
-                color="gray"
-                _hover={{ color: "black" }}
+                color="whiteAlpha.600"
+                _hover={{ color: "whiteAlpha.900" }}
               />
               <Image
                 src={images[currentSlide]}
@@ -111,8 +115,8 @@ const SlideshowBox = ({ children }) => {
                 h={7}
                 onClick={next}
                 cursor="pointer"
-                color="gray"
-                _hover={{ color: "black" }}
+                color="whiteAlpha.600"
+                _hover={{ color: "whiteAlpha.900" }}
               />
             </Box>
           </ModalBody>
