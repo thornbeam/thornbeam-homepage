@@ -3,12 +3,6 @@ import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
-// Defines:
-// * Global information of this website
-// * Main website-title (further details in article.js)
-// * Navbar for all pages
-// * Container for all pages (by default, maxWidth is set to 60 characters (60ch))
-
 const Global = ({ children }) => {
   return (
     <Box>
@@ -22,7 +16,7 @@ const Global = ({ children }) => {
       <Navbar />
       <Container position="relative" top={70} maxW="container.md">
         {children}
-        <Footer></Footer>
+      <Footer></Footer>
       </Container>
     </Box>
   );

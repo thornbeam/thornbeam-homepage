@@ -1,9 +1,6 @@
 import Head from "next/head";
 
-// Defines:
-// * Page-title for each page 
-
-const Article = ({ children, title, bgColor }) => {
+const Article = ({ children, title }) => {
   return (
     <>
       {title && (

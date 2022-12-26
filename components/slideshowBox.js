@@ -20,7 +20,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const SlideshowBox = ({ images, modalFooterText = "", children }) => {
+const SlideshowBox = ({ images, modalFooterText = "", children, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function previous() {
@@ -43,15 +43,17 @@ const SlideshowBox = ({ images, modalFooterText = "", children }) => {
 
   return (
     <>
-      <Container maxW="container.sm">
+      <Container maxW="container.sm" {...props}>
         <AspectRatio maxW="100%" ratio={4 / 3}>
           <Box
-            onClick={onOpen}
             display="flex"
-            justifyContent="center"
+            flexDirection="column"
             alignItems="center"
+            justifyContent="center"
+            onClick={onOpen}
             fontWeight="bold"
-            color="base03"
+            fontSize="1.2rem"
+            color="whiteAlpha.900"
             bgImage={images[currentSlide]}
             bgPosition="center"
             bgRepeat="no-repeat"
@@ -59,7 +61,7 @@ const SlideshowBox = ({ images, modalFooterText = "", children }) => {
             textTransform="uppercase"
             letterSpacing="1px"
             cursor="pointer"
-            filter="grayscale(90%)"
+            filter="grayscale(100%)"
             _hover={{ filter: "none" }}
             transition="filter 0.3s"
           >
