@@ -20,7 +20,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const SlideshowBox = ({ images, children }) => {
+const SlideshowBox = ({ images, modalFooterText = "", children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function previous() {
@@ -82,44 +82,40 @@ const SlideshowBox = ({ images, children }) => {
           backdropBlur="7px"
         >
           <ModalCloseButton />
-          <ModalBody display="flex" justifyContent="center" alignItems="center">
-            <Box
-              display="flex"
-              flexDirection="row"
-              justifyContent="space-around"
-              alignItems="center"
-            >
-              <ChevronLeftIcon
-                position="absolute"
-                top="50%"
-                left="30px"
-                w={7}
-                h={7}
-                onClick={previous}
-                cursor="pointer"
-                color="whiteAlpha.600"
-                _hover={{ color: "whiteAlpha.900" }}
-              />
-              <Image
-                src={images[currentSlide]}
-                width="80vw"
-                height="80vh"
-                objectFit="contain"
-                m={20}
-              ></Image>
-              <ChevronRightIcon
-                position="absolute"
-                top="50%"
-                right="30px"
-                w={7}
-                h={7}
-                onClick={next}
-                cursor="pointer"
-                color="whiteAlpha.600"
-                _hover={{ color: "whiteAlpha.900" }}
-              />
-            </Box>
+          <ModalBody
+            display="flex"
+            flexDirection="row"
+            justifyContent="space-around"
+            alignItems="center"
+          >
+            <ChevronLeftIcon
+              w={7}
+              h={7}
+              onClick={previous}
+              cursor="pointer"
+              color="whiteAlpha.600"
+              _hover={{ color: "whiteAlpha.900" }}
+            />
+            <Image
+              src={images[currentSlide]}
+              width="90vw"
+              height="80vh"
+              objectFit="contain"
+            />
+            <ChevronRightIcon
+              w={7}
+              h={7}
+              onClick={next}
+              cursor="pointer"
+              color="whiteAlpha.600"
+              _hover={{ color: "whiteAlpha.900" }}
+            />
           </ModalBody>
+          <ModalFooter>
+            <Text fontSize="0.9rem" fontStyle="italic">
+              {modalFooterText}
+            </Text>
+          </ModalFooter>
         </ModalContent>
       </Modal>
     </>
