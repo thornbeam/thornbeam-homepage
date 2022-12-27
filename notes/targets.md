@@ -26,3 +26,7 @@ title: Targets
 
 # Note on 2022-12-20
 * Using Box instead of Image has some issues, can't set some functions needed, so finding the way to use overlay text over Image component
+
+# Note 2022-12-27
+* Login page for about details
+* Finish form api
