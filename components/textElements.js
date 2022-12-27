@@ -1,4 +1,15 @@
 import NextLink from "next/link";
+  <Text>
+    2020 New Roses, Bjoern Knapp / Photos: Hidetoshi Mitsuzaki /{" "}
+    <Link
+      as={NextLink}
+      textDecoration="underline"
+      href="https://www.knappbjoern.de/"
+      isExternal
+    >
+      To Artist's Website
+    </Link>
+  </Text>
 import { Text, Link } from "@chakra-ui/react";
 
 const DerBogenImAugeExhibitionFooter = (
@@ -95,4 +106,39 @@ const DerBogenImAugePublicationData = (
   </>
 );
 
-export { DerBogenImAugeExhibitionFooter, KosmetikExhibitionFooter, YoungArtistPublicationData, DerBogenImAugePublicationData }
+const NewRosesFooter = (
+  <Text>
+    2020 New Roses, Bjoern Knapp / Photos: Hidetoshi Mitsuzaki /{" "}
+    <Link
+      as={NextLink}
+      textDecoration="underline"
+      href="https://www.knappbjoern.de/"
+      isExternal
+    >
+      To Artist's Website
+    </Link>
+  </Text>
+);
+
+const NailsFooter = (
+  <Text>
+Nails projectroom e.V., Birkenstraße 61 40233 Düsseldorf /{" "}
+    <Link
+      as={NextLink}
+      textDecoration="underline"
+      href="https://nails-room.com/"
+      isExternal
+    >
+      To NAILS's Website
+    </Link>
+  </Text>
+);
+
+export {
+  DerBogenImAugeExhibitionFooter,
+  KosmetikExhibitionFooter,
+  YoungArtistPublicationData,
+  DerBogenImAugePublicationData,
+  NewRosesFooter,
+  NailsFooter
+};

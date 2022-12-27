@@ -26,8 +26,10 @@ import ImageModal from "../components/imageModal";
 import ExhibitionSlideshow from "../components/exhibitionSlideshow";
 import PublicationSlideshow from "../components/publicationSlideshow";
 
-import Birkenstr61 from "../components/image_urls/birkenstr61"
-import NewRoses from "../components/image_urls/newRoses"
+import Birkenstr61 from "../components/image_urls/birkenstr61";
+import NewRoses from "../components/image_urls/newRoses";
+
+import { NewRosesFooter, NailsFooter } from "../components/textElements.js";
 
 export default function Others() {
   return (
@@ -36,12 +38,14 @@ export default function Others() {
       <ExhibitionSlideshow
         images={NewRoses}
         mt={20}
+        modalFooterText={NewRosesFooter}
       >
         New Roses / Bjoern Knapp
       </ExhibitionSlideshow>
       <ExhibitionSlideshow
         images={Birkenstr61}
         mt={24}
+        modalFooterText={NailsFooter}
       >
         Nails Project Room
       </ExhibitionSlideshow>
