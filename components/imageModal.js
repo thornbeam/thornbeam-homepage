@@ -25,7 +25,7 @@ function ModalImage(id, src) {
   }
 }
 
-const ModalImageContainer = ({
+const ImageModal = ({
   id = "",
   src,
   maxH,
@@ -87,4 +87,4 @@ const ModalImageContainer = ({
   );
 };
 
-export default ModalImageContainer;
+export default ImageModal;

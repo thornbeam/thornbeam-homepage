@@ -20,7 +20,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const SlideshowBox = ({ images, modalFooterText="", children, ...props }) => {
+const ExhibitionSlideshow = ({ images, modalFooterText="", children, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function previous() {
@@ -126,4 +126,4 @@ const SlideshowBox = ({ images, modalFooterText="", children, ...props }) => {
   );
 };
 
-export default SlideshowBox;
+export default ExhibitionSlideshow;

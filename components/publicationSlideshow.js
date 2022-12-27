@@ -19,7 +19,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const publicationModal = ({
+const PublicationSlideshow = ({
   id = "",
   imgSrc,
   mdlSrc,
@@ -114,4 +114,4 @@ const publicationModal = ({
   );
 };
 
-export default publicationModal;
+export default PublicationSlideshow;
