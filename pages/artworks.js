@@ -32,42 +32,12 @@ import YoungArtist from "../components/image_urls/youngArtist";
 import DerBogenImAugeExhibition from "../components/image_urls/derBogenImAuge-exhibition";
 import DerBogenImAugePublication from "../components/image_urls/derBogenImAuge-publication";
 
-const DerBogenImAugeModalFooter = (
-  <Text>
-    Test text with{" "}
-    <Link as={NextLink} href="#">
-      link
-    </Link>
-  </Text>
-);
-
-const DerBogenImAugeText = (
-  <Text>
-    2022 Der Bogen im Auge / Photos: Ivo Faber /{" "}
-    <Link
-      as={NextLink}
-      textDecoration="underline"
-      href="https://www.kunst-im-tunnel.de/exhibition/der-bogen-im-auge/"
-      isExternal
-    >
-      More details
-    </Link>
-  </Text>
-);
-
-const KosmetikText = (
-  <Text>
-    2021 Kosmetik, with Denise Werth / Photos: Kai Werner Schmidt /{" "}
-    <Link
-      as={NextLink}
-      textDecoration="underline"
-      href="https://nails-room.com/kosmetik/"
-      isExternal
-    >
-      More details
-    </Link>
-  </Text>
-);
+import {
+  DerBogenImAugeExhibitionFooter,
+  KosmetikExhibitionFooter,
+  YoungArtistPublicationData,
+  DerBogenImAugePublicationData,
+} from "../components/textElements";
 
 export default function Artworks() {
   return (
@@ -76,7 +46,7 @@ export default function Artworks() {
       <ExhibitionSlideshow
         images={DerBogenImAugeExhibition}
         mt={20}
-        modalFooterText={DerBogenImAugeText}
+        modalFooterText={DerBogenImAugeExhibitionFooter}
       >
         Der Bogen im Auge
       </ExhibitionSlideshow>
@@ -89,11 +59,12 @@ export default function Artworks() {
       </ExhibitionSlideshow>
       <ExhibitionSlideshow
         images={Kosmetik}
-        modalFooterText={KosmetikText}
+        modalFooterText={KosmetikExhibitionFooter}
         mt={24}
       >
         Kosmetik
       </ExhibitionSlideshow>
+
       <ContentTitle>Publications</ContentTitle>
       <PublicationSlideshow
         imgSrc="/artworks/publications/vlb_9783868326529_1.jpg"
@@ -101,36 +72,7 @@ export default function Artworks() {
         maxH="60vh"
         maxW="50%"
       >
-        <Text mt={7} fontWeight="bold">
-          Young Artists / Hidetoshi Mitsuzaki
-        </Text>
-        <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-          Katalog
-          <br />
-          28,0 cm x 22,0 cm
-          <br />
-          80 Seiten
-          <br />
-          41 farbigen Abb.
-        </Text>
-        <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-          Herausgeber: Matthias Erntges
-          <br />
-          Verlag Wienand
-          <br />
-          ISBN 978-3-86832-652-9
-        </Text>
-        <Link
-          mt={3}
-          as={NextLink}
-          href="https://www.wienand-verlag.de/Programm/Zeitgenoessische-Kunst/Young-Artists-Hidetoshi-Mitsuzaki.html"
-          fontFamily="Roboto Slab, serif"
-          fontStyle="italic"
-          textDecoration="underline"
-          isExternal
-        >
-          More details
-        </Link>
+        {YoungArtistPublicationData}
       </PublicationSlideshow>
       <PublicationSlideshow
         imgSrc="/artworks/publications/der_bogen_im_auge/der_bogen_im_auge_1.jpg"
@@ -138,32 +80,7 @@ export default function Artworks() {
         maxH="60vh"
         maxW="50%"
       >
-        <Text mt={7} fontWeight="bold">
-          Der Bogen im Auge
-        </Text>
-        <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-          Katalog
-          <br />
-          28,0 cm x 22,0 cm
-          <br />
-          80 Seiten
-          <br />
-          41 farbigen Abb.
-        </Text>
-        <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-          Herausgeber: KIT – Kunst im Tunnel und Kunsthalle Düsseldorf gGmbH
-        </Text>
-        <Link
-          mt={3}
-          as={NextLink}
-          href="https://www.kunst-im-tunnel.de/publication/der-bogen-im-auge/"
-          fontFamily="Roboto Slab, serif"
-          fontStyle="italic"
-          textDecoration="underline"
-          isExternal
-        >
-          More details
-        </Link>
+        {DerBogenImAugePublicationData}
       </PublicationSlideshow>
       <ContentTitle>Selected Artworks</ContentTitle>
       <ContentText fontFamily="Roboto Slab, serif" fontStyle="italic">
