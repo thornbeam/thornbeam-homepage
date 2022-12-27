@@ -20,7 +20,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-const SlideshowBox = ({ images, modalFooterText = "", children, ...props }) => {
+const SlideshowBox = ({ images, modalFooterText="", children, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function previous() {
@@ -113,11 +113,13 @@ const SlideshowBox = ({ images, modalFooterText = "", children, ...props }) => {
               _hover={{ color: "whiteAlpha.900" }}
             />
           </ModalBody>
-          <ModalFooter>
-            <Text fontSize="0.9rem" fontStyle="italic">
-              {modalFooterText}
-            </Text>
-          </ModalFooter>
+          {(modalFooterText != "") && (
+            <ModalFooter>
+              <Text fontSize="0.9rem" fontStyle="italic">
+                {modalFooterText}
+              </Text>
+            </ModalFooter>
+          )}
         </ModalContent>
       </Modal>
     </>

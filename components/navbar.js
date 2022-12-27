@@ -44,8 +44,8 @@ const Navbar = () => {
         >
           <LinkItem href="/">Home</LinkItem>
           <LinkItem href="/artworks">Artworks</LinkItem>
-          <LinkItem href="/webpages">Others</LinkItem>
-          <LinkItem href="https://github.com/thornbeam">Source</LinkItem>
+          <LinkItem href="/others">Others</LinkItem>
+          <LinkItem href="https://github.com/thornbeam" isExternal>Source</LinkItem>
           <LinkItem href="/about">About</LinkItem>
         </Stack>
         <Box className="navbarRight" display="flex">
@@ -65,9 +65,9 @@ const Navbar = () => {
               <MenuList p={0} bg={useColorModeValue("base0", "base01")} boxShadow="base">
                 <MenuLinkItem href="/">Home</MenuLinkItem>
                 <MenuLinkItem href="/artworks">Artworks</MenuLinkItem>
-                <MenuLinkItem href="/webpages">Webpages</MenuLinkItem>
-                <MenuLinkItem href="www.github.com/thornbeam">
-                  GitHub
+                <MenuLinkItem href="/others">Others</MenuLinkItem>
+                <MenuLinkItem href="www.github.com/thornbeam" isExternal>
+                  Source
                 </MenuLinkItem>
                 <MenuLinkItem href="/about">About</MenuLinkItem>
               </MenuList>

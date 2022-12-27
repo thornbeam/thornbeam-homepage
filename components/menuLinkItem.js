@@ -9,7 +9,7 @@ export default function MenuLinkItem({ href, children, ...props }) {
       display="block"
       textAlign="center"
       bg={useColorModeValue("base0", "base01")}
-      _hover={{ bg: useColorModeValue("base1", "base00") }}
+      _hover={{ bg: useColorModeValue("base01", "base00"), color: "white" }}
     >
       <Link
         as={NextLink}

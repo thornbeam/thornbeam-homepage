@@ -77,7 +77,7 @@ export default function Home() {
       <Container maxW="container.sm">
         <HStack mt={7} spacing="20px">
           <LinkItem href="/artworks">To Artworks</LinkItem>
-          <LinkItem href="/artworks">To Other Webpages</LinkItem>
+          <LinkItem href="/artworks">To Other Works</LinkItem>
         </HStack>
       </Container>
       <ContentTitle>About</ContentTitle>
