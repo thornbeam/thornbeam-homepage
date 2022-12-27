@@ -9,7 +9,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-const InputEd = ({ children, ...props }) => {
+import { useState } from "react";
+
+const InputNew = ({ children, ...props }) => {
   return (
     <Input
       borderColor="base00"
@@ -23,31 +25,36 @@ const InputEd = ({ children, ...props }) => {
   );
 };
 
-const FormControlEd = ({ children, ...props }) => {
+const FormControlNew = ({ children, ...props }) => {
   return (
-    <FormControl isInvalid={isError} mt={5} {...props}>
+    <FormControl mt={5} {...props}>
       {children}
     </FormControl>
   );
 };
 
-const isError = Input === "";
-
 const Form = () => {
+  const [input, setInput] = useState("");
+  const isError = input === "";
+
   return (
     <Container maxW="container.sm">
-      <FormControlEd>
+      <FormControlNew>
         <FormLabel>Name</FormLabel>
-        <InputEd type="name" placeholder="Your Name"></InputEd>
-      </FormControlEd>
-      <FormControlEd>
+        <InputNew type="name" placeholder="Your Name"></InputNew>
+      </FormControlNew>
+      <FormControlNew>
         <FormLabel>Email address</FormLabel>
-        <InputEd type="email" placeholder="Your Email Address"></InputEd>
-      </FormControlEd>
-      <FormControlEd>
+        <InputNew type="email" placeholder="Your Email Address"></InputNew>
+      </FormControlNew>
+      <FormControlNew>
         <FormLabel>Message</FormLabel>
-        <InputEd type="text" height="30vh" placeholder="Your Message"></InputEd>
-      </FormControlEd>
+        <InputNew
+          type="text"
+          height="30vh"
+          placeholder="Your Message"
+        ></InputNew>
+      </FormControlNew>
       <Button
         mt={5}
         bg={useColorModeValue("base0", "base01")}
