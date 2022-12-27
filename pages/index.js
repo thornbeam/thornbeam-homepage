@@ -17,7 +17,6 @@ import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import BioContent from "../components/bioContent";
 import Footer from "../components/footer";
-import Form from "../components/test/form"
 
 export default function Home() {
   return (
@@ -101,7 +100,9 @@ export default function Home() {
         </HStack>
       </Container>
       <ContentTitle>Contact</ContentTitle>
-      <Form></Form>
+      <Container maxW="container.sm">
+        <Link as={NextLink} href="mailto: thornbeam@posteo.eu">thornbeam@posteo.eu</Link>
+      </Container>
     </Article>
   );
 }
