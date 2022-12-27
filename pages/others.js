@@ -26,11 +26,25 @@ import ImageModal from "../components/imageModal";
 import ExhibitionSlideshow from "../components/exhibitionSlideshow";
 import PublicationSlideshow from "../components/publicationSlideshow";
 
+import Birkenstr61 from "../components/image_urls/birkenstr61"
+import NewRoses from "../components/image_urls/newRoses"
+
 export default function Others() {
   return (
     <Article>
-      <ContentTitle>Other Works</ContentTitle>
-      <ContentText>Text</ContentText>
+      <ContentTitle>Photography</ContentTitle>
+      <ExhibitionSlideshow
+        images={NewRoses}
+        mt={20}
+      >
+        New Roses / Bjoern Knapp
+      </ExhibitionSlideshow>
+      <ExhibitionSlideshow
+        images={Birkenstr61}
+        mt={24}
+      >
+        Nails Project Room
+      </ExhibitionSlideshow>
     </Article>
   );
 }
