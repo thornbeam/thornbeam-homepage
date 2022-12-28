@@ -94,9 +94,10 @@ export default function Home() {
       ></BioContent>
       <ContentTitle>Contact</ContentTitle>
       <Container maxW="container.sm">
-        <Link as={NextLink} href="mailto: thornbeam@posteo.eu">
-          thornbeam@posteo.eu
-        </Link>
+        <HStack mt={7} spacing="20px">
+          <LinkItem href="mailto: thornbeam@posteo.eu">Email Thornbeam</LinkItem>
+          <LinkItem href="/impressum">Impressum / Disclaimer</LinkItem>
+        </HStack>
       </Container>
     </Article>
   );
