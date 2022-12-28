@@ -141,7 +141,7 @@ const NailsFooter = (
 
 const BffOrEverFooter = (
   <Text textAlign="right">
-    2020 BFF OR EVER, Sabrina Podemski & Steffen Jopp
+    2020 BFF OR EVER, Sabrina Podemski & Steffen Jopp /{" "}
     <Link
       as={NextLink}
       textDecoration="underline"
