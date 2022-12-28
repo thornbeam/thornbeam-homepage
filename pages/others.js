@@ -47,7 +47,9 @@ export default function Others() {
         mt={20}
         modalFooterText={NewRosesFooter}
       >
-        New Roses / Bjoern Knapp
+        New Roses 
+        <br />
+        Bjoern Knapp
       </ExhibitionSlideshow>
       <ExhibitionSlideshow
         images={Marpat}
