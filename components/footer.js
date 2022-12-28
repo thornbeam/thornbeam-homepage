@@ -12,8 +12,8 @@ export default function Footer() {
       fontSize="0.9rem"
       userSelect="none"
     >
-      &copy; {new Date().getFullYear()} Thornbeam, Hidetoshi Mitsuzaki. All
-      Rights Reserved.
+      &copy; {new Date().getFullYear()} Hidetoshi Mitsuzaki. All Rights
+      Reserved.
     </Text>
   );
 }

@@ -74,7 +74,7 @@ export default function Home() {
       <Container maxW="container.sm">
         <HStack mt={7} spacing="20px">
           <LinkItem href="/artworks">To Artworks</LinkItem>
-          <LinkItem href="/artworks">To Other Works</LinkItem>
+          <LinkItem href="/others">To Other Works</LinkItem>
         </HStack>
       </Container>
       <ContentTitle>About</ContentTitle>
@@ -95,8 +95,8 @@ export default function Home() {
       <ContentTitle>Contact</ContentTitle>
       <Container maxW="container.sm">
         <HStack mt={7} spacing="20px">
-          <LinkItem href="mailto: thornbeam@posteo.eu">Email Thornbeam</LinkItem>
-          <LinkItem href="/impressum">Impressum / Disclaimer</LinkItem>
+          <LinkItem href="mailto: thornbeam@posteo.eu" textAlign="center">Email Thornbeam</LinkItem>
+          <LinkItem href="/impressum" textAlign="center">Impressum / Disclaimer</LinkItem>
         </HStack>
       </Container>
     </Article>
