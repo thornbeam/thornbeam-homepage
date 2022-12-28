@@ -90,7 +90,7 @@ export default function Artworks() {
         einer eigenen Bildsprache und einem Raum für Interpretationen zusammen.
       </ContentText>
       <ImageModal
-        src="/artworks/jpg/2021-skull.jpg"
+        src="/artworks/jpg/darktable_exported/2021-skull.jpg"
         maxW="90%"
         maxH="50vh"
         mt={24}
@@ -98,7 +98,7 @@ export default function Artworks() {
         Skull 2021, 100 × 130 cm
       </ImageModal>
       <ImageModal
-        src="/artworks/jpg/2021-ohne_titel.jpg"
+        src="/artworks/jpg/darktable_exported/2021-ohne_titel.jpg"
         maxW="60%"
         maxH="60vh"
       >
@@ -113,7 +113,7 @@ export default function Artworks() {
       </ImageModal>
       <ImageModal
         id="small"
-        src="/artworks/jpg/2020-bjt.jpg"
+        src="/artworks/jpg/darktable_exported/2020-bjt.jpg"
         maxW="40%"
         maxH="40vh"
       >
