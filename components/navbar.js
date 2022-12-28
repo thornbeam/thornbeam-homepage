@@ -1,4 +1,5 @@
 import {
+  Image,
   Link,
   Box,
   Container,
@@ -16,6 +17,7 @@ import LinkItem from "../components/linkItem";
 import MenuLinkItem from "../components/menuLinkItem";
 import Logo from "./logo";
 import ToggleButton from "./toggleButton";
+import { IoLogoGithub } from "react-icons/io5";
 
 const Navbar = () => {
   return (
@@ -29,7 +31,7 @@ const Navbar = () => {
       zIndex={1}
     >
       <Container
-        maxW="container.lg"
+        maxW="container.md"
         display="flex"
         alignItems="center"
         justifyContent="space-between"
@@ -45,8 +47,16 @@ const Navbar = () => {
           <LinkItem href="/">Home</LinkItem>
           <LinkItem href="/artworks">Artworks</LinkItem>
           <LinkItem href="/others">Others</LinkItem>
-          <LinkItem href="https://github.com/thornbeam" isExternal>Source</LinkItem>
-          <LinkItem href="/about">About</LinkItem>
+          <LinkItem
+            href="https://github.com/thornbeam"
+            isExternal
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+          >
+            <IoLogoGithub />
+            Source
+          </LinkItem>
         </Stack>
         <Box className="navbarRight" display="flex">
           <ToggleButton />
@@ -62,14 +72,17 @@ const Navbar = () => {
                 _hover={{ bg: useColorModeValue("base3", "base00") }}
                 _expanded={{ bg: useColorModeValue("base0", "base00") }}
               />
-              <MenuList p={0} bg={useColorModeValue("base0", "base01")} boxShadow="base">
+              <MenuList
+                p={0}
+                bg={useColorModeValue("base0", "base01")}
+                boxShadow="base"
+              >
                 <MenuLinkItem href="/">Home</MenuLinkItem>
                 <MenuLinkItem href="/artworks">Artworks</MenuLinkItem>
                 <MenuLinkItem href="/others">Others</MenuLinkItem>
                 <MenuLinkItem href="www.github.com/thornbeam" isExternal>
                   Source
                 </MenuLinkItem>
-                <MenuLinkItem href="/about">About</MenuLinkItem>
               </MenuList>
             </Menu>
           </Box>

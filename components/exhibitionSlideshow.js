@@ -64,6 +64,7 @@ const ExhibitionSlideshow = ({ images, modalFooterText="none", children, ...prop
             filter="grayscale(100%)"
             _hover={{ filter: "none" }}
             transition="filter 0.3s"
+            textAlign="center"
           >
             {children}
           </Box>

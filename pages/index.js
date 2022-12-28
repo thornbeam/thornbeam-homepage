@@ -27,7 +27,7 @@ export default function Home() {
         p={2}
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
-        justifyContent={{ base: "center", md: "space-between" }}
+        justifyContent={{ base: "center", md: "space-around" }}
         alignItems="center"
         userSelect="none"
       >
@@ -45,12 +45,10 @@ export default function Home() {
             letterSpacing="-0.7px"
             mb={3}
           >
-            <Text fontSize="2.0rem">Hidetoshi Mitsuzaki</Text>
-            <Text fontSize="1.5rem">@Thornbeam</Text>
+            <Text fontSize="1.5rem">Hidetoshi Mitsuzaki</Text>
+            <Text fontSize="1.2rem">@Thornbeam</Text>
           </Box>
-          <Text fontSize="1.1rem">
-            Artist * Developer * Designer * Translator
-          </Text>
+          <Text fontSize="1.0rem">Artist * Photographer * Developer etc.</Text>
         </Box>
         <Image
           src="/profile.jpg"
@@ -59,19 +57,19 @@ export default function Home() {
           borderRadius="full"
           borderWidth={2}
           borderColor="grey"
-          maxWidth="250px"
+          maxWidth={{ base: "200px", md: "250px" }}
           mt={{ base: 5, md: 10 }}
         />
       </Box>
-      <ContentTitle>Works</ContentTitle>
+      <ContentTitle mt={{ base: "3rem" }}>Works</ContentTitle>
       <Container maxW="container.sm" mb={12}>
         <Image src="/artworks/jpg/2020-union_spiel-v1.jpg" />
       </Container>
       <ContentText fontFamily="Roboto Slab, serif" fontStyle="italic">
-        Hidetoshi Mitsuzaki (geb. 1989) greift in seiner Malerei Symbole,
-        Piktogramme, Infografiken und andere kommunikative Gestaltungsmittel
-        auf, löst sie aus ihrem ursprünglichen Kontext heraus und fügt sie zu
-        einer eigenen Bildsprache und einem Raum für Interpretationen zusammen.
+        Hidetoshi Mitsuzaki takes up symbols, pictograms, infographics
+        and other communicative design means in his painting, detaches them from
+        their original context and combines them to create his own visual
+        language and a space for interpretation.
       </ContentText>
       <Container maxW="container.sm">
         <HStack mt={7} spacing="20px">
@@ -94,14 +92,11 @@ export default function Home() {
         year="2021 to present"
         text="Lives and works as artist in Duesseldorf"
       ></BioContent>
-      <Container maxW="container.sm">
-        <HStack mt={12} spacing="20px">
-          <LinkItem href="/about">More Details</LinkItem>
-        </HStack>
-      </Container>
       <ContentTitle>Contact</ContentTitle>
       <Container maxW="container.sm">
-        <Link as={NextLink} href="mailto: thornbeam@posteo.eu">thornbeam@posteo.eu</Link>
+        <Link as={NextLink} href="mailto: thornbeam@posteo.eu">
+          thornbeam@posteo.eu
+        </Link>
       </Container>
     </Article>
   );

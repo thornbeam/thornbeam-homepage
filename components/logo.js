@@ -8,7 +8,6 @@ export default function Logo({ href }) {
       <HStack spacing="10px" align="center">
         <Image
           src={logoImage}
-          alt="Thornbeam Logo"
           boxSize="35px"
           objectFit="cover"
         />

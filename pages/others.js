@@ -28,8 +28,15 @@ import PublicationSlideshow from "../components/publicationSlideshow";
 
 import Birkenstr61 from "../components/image_urls/birkenstr61";
 import NewRoses from "../components/image_urls/newRoses";
+import BffOrEver from "../components/image_urls/bffOrEver";
+import Marpat from "../components/image_urls/marpat"
 
-import { NewRosesFooter, NailsFooter } from "../components/textElements.js";
+import {
+  NewRosesFooter,
+  NailsFooter,
+  BffOrEverFooter,
+  MarpatFooter,
+} from "../components/textElements.js";
 
 export default function Others() {
   return (
@@ -41,6 +48,22 @@ export default function Others() {
         modalFooterText={NewRosesFooter}
       >
         New Roses / Bjoern Knapp
+      </ExhibitionSlideshow>
+      <ExhibitionSlideshow
+        images={Marpat}
+        mt={24}
+        modalFooterText={MarpatFooter}
+      >
+        Marpat
+      </ExhibitionSlideshow>
+      <ExhibitionSlideshow
+        images={BffOrEver}
+        mt={24}
+        modalFooterText={BffOrEverFooter}
+      >
+        BFF or Ever
+        <br />
+        Sabrina Podemski & Steffen Jopp
       </ExhibitionSlideshow>
       <ExhibitionSlideshow
         images={Birkenstr61}

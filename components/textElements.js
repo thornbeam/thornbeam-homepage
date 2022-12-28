@@ -1,20 +1,9 @@
 import NextLink from "next/link";
-  <Text>
-    2020 New Roses, Bjoern Knapp / Photos: Hidetoshi Mitsuzaki /{" "}
-    <Link
-      as={NextLink}
-      textDecoration="underline"
-      href="https://www.knappbjoern.de/"
-      isExternal
-    >
-      To Artist's Website
-    </Link>
-  </Text>
 import { Text, Link } from "@chakra-ui/react";
 
 const DerBogenImAugeExhibitionFooter = (
-  <Text>
-    2022 Der Bogen im Auge / Photos: Ivo Faber /{" "}
+  <Text textAlign="right">
+    2022 Der Bogen im Auge /{" "}
     <Link
       as={NextLink}
       textDecoration="underline"
@@ -23,12 +12,14 @@ const DerBogenImAugeExhibitionFooter = (
     >
       More details
     </Link>
+    <br />
+    Photos: Ivo Faber
   </Text>
 );
 
 const KosmetikExhibitionFooter = (
-  <Text>
-    2021 Kosmetik, with Denise Werth / Photos: Kai Werner Schmidt /{" "}
+  <Text textAlign="right">
+    2021 Kosmetik, with Denise Werth /{" "}
     <Link
       as={NextLink}
       textDecoration="underline"
@@ -37,6 +28,8 @@ const KosmetikExhibitionFooter = (
     >
       More details
     </Link>
+    <br />
+    Photos: Kai Werner Schmidt
   </Text>
 );
 
@@ -107,30 +100,74 @@ const DerBogenImAugePublicationData = (
 );
 
 const NewRosesFooter = (
-  <Text>
-    2020 New Roses, Bjoern Knapp / Photos: Hidetoshi Mitsuzaki /{" "}
+  <Text textAlign="right">
+    2020 New Roses, Bjoern Knapp /{" "}
     <Link
       as={NextLink}
       textDecoration="underline"
       href="https://www.knappbjoern.de/"
       isExternal
     >
-      To Artist's Website
+      To Homepage of artist
     </Link>
+    <br />
+    Photos: Hidetoshi Mitsuzaki
+  </Text>
+);
+
+const UnionSpielFooter = (
+  <Text textAlign="right">
+    2021 Union/SPIEL
+    <br />
+    Photos: Hidetoshi Mitsuzaki
   </Text>
 );
 
 const NailsFooter = (
-  <Text>
-Nails projectroom e.V., Birkenstraße 61 40233 Düsseldorf /{" "}
+  <Text textAlign="right">
+    Nails projectroom e.V., Birkenstraße 61 40233 Düsseldorf /{" "}
     <Link
       as={NextLink}
       textDecoration="underline"
       href="https://nails-room.com/"
       isExternal
     >
-      To NAILS's Website
+      To homepage of Nails projectroom
     </Link>
+    <br />
+    Photos: Hidetoshi Mitsuzaki
+  </Text>
+);
+
+const BffOrEverFooter = (
+  <Text textAlign="right">
+    2020 BFF OR EVER, Sabrina Podemski & Steffen Jopp
+    <Link
+      as={NextLink}
+      textDecoration="underline"
+      href="https://nails-room.com/bfforever"
+      isExternal
+    >
+      To website of exhibition
+    </Link>
+    <br />
+    Photos: Hidetoshi Mitsuzaki
+  </Text>
+);
+
+const MarpatFooter = (
+  <Text textAlign="right">
+    2020 Marpat /{" "}
+    <Link
+      as={NextLink}
+      textDecoration="underline"
+      href="http://klassescheibitz.de/ausstellungen/"
+      isExternal
+    >
+      To website of exhibition
+    </Link>
+    <br />
+    Photos: Hidetoshi Mitsuzaki
   </Text>
 );
 
@@ -140,5 +177,8 @@ export {
   YoungArtistPublicationData,
   DerBogenImAugePublicationData,
   NewRosesFooter,
-  NailsFooter
+  NailsFooter,
+  BffOrEverFooter,
+  MarpatFooter,
+  UnionSpielFooter,
 };

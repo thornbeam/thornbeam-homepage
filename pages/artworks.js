@@ -37,6 +37,7 @@ import {
   KosmetikExhibitionFooter,
   YoungArtistPublicationData,
   DerBogenImAugePublicationData,
+  UnionSpielFooter,
 } from "../components/textElements";
 
 export default function Artworks() {
@@ -52,7 +53,7 @@ export default function Artworks() {
       </ExhibitionSlideshow>
       <ExhibitionSlideshow
         images={UnionSpiel}
-        modalFooterText="2021 Union/SPIEL, Photos: Hidetoshi Mitsuzaki"
+        modalFooterText={UnionSpielFooter}
         mt={24}
       >
         Union/Spiel
@@ -83,12 +84,6 @@ export default function Artworks() {
         {DerBogenImAugePublicationData}
       </PublicationSlideshow>
       <ContentTitle>Selected Artworks</ContentTitle>
-      <ContentText fontFamily="Roboto Slab, serif" fontStyle="italic">
-        Hidetoshi Mitsuzaki (geb. 1989) greift in seiner Malerei Symbole,
-        Piktogramme, Infografiken und andere kommunikative Gestaltungsmittel
-        auf, löst sie aus ihrem ursprünglichen Kontext heraus und fügt sie zu
-        einer eigenen Bildsprache und einem Raum für Interpretationen zusammen.
-      </ContentText>
       <ImageModal
         src="/artworks/jpg/darktable_exported/2021-skull.jpg"
         maxW="90%"
@@ -120,7 +115,7 @@ export default function Artworks() {
         BJT 2020, 50 × 50 cm
       </ImageModal>
       <ImageModal src="/artworks/jpg/2020-abd.jpg" maxW="60%" maxH="60vh">
-        A.B.D**** 2020, 180 × 130 cm
+        A.B.D. 2020, 180 × 130 cm
       </ImageModal>
       <Container mt={20} maxW="container.sm">
         <Menu>

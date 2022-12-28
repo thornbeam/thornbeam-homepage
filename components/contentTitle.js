@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 const TitleBox = styled(Box)`
-  margin: 5rem 2rem 3rem 0;
+  margin: 0 2rem 3rem 0;
   display: flex;
 `;
 
@@ -21,9 +21,9 @@ const TitleText = styled(Text)`
   user-select: none;
 `;
 
-const ContentTitle = ({ children }) => {
+const ContentTitle = ({ children, mt="5rem"}) => {
   return (
-    <Container maxW="container.md">
+    <Container maxW="container.md" mt={mt}>
       <TitleBox>
         <TitleText>{children}</TitleText>
       </TitleBox>
