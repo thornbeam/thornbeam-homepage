@@ -39,18 +39,18 @@ const YoungArtistPublicationData = (
       Young Artists / Hidetoshi Mitsuzaki
     </Text>
     <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-      Katalog
+      Catalogue
       <br />
       28,0 cm x 22,0 cm
       <br />
-      80 Seiten
+      80 pages
       <br />
-      41 farbigen Abb.
+      41 plates
     </Text>
     <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-      Herausgeber: Matthias Erntges
+      Editor: Matthias Erntges
       <br />
-      Verlag Wienand
+      Publisher: Wienand Verlag GmbH
       <br />
       ISBN 978-3-86832-652-9
     </Text>
@@ -74,16 +74,13 @@ const DerBogenImAugePublicationData = (
       Der Bogen im Auge
     </Text>
     <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-      Katalog
+      Catalogue
       <br />
-      28,0 cm x 22,0 cm
+      26,0 cm x 20,0 cm
       <br />
-      80 Seiten
-      <br />
-      41 farbigen Abb.
     </Text>
     <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
-      Herausgeber: KIT – Kunst im Tunnel und Kunsthalle Düsseldorf gGmbH
+      Publisher: KIT – Kunst im Tunnel und Kunsthalle Düsseldorf gGmbH
     </Text>
     <Link
       mt={3}

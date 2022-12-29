@@ -78,19 +78,20 @@ export default function Home() {
         </HStack>
       </Container>
       <ContentTitle>About</ContentTitle>
-      <BioContent year="1989" text="Born in Osaka, Japan"></BioContent>
+      <BioContent year="1989" text="born in Osaka, Japan"></BioContent>
       <BioContent
-        year="2013"
-        text="Completed the Bachelor's Program at Kyoto University of Art and Design"
+        year="2009 - 2013"
+        text="Study at the Kyoto University of Art and Design, Japan (Bachelor)"
       ></BioContent>
-      <BioContent text="Start to live in Germany"></BioContent>
+      <BioContent year="2013" text="move to Germany"></BioContent>
       <BioContent
-        year="2021"
-        text="Completed the Diplom's Program at the Art Academy Duesseldorf"
+        year="2014 - 2021"
+        text="Study at the Kunstakademie Duesseldorf, Germany (Diploma)"
       ></BioContent>
+      <BioContent year="2021" text="Master scholar under Prof. Thomas Scheibitz, Kunstakademie Duesseldorf"></BioContent>
       <BioContent
         year="2021 to present"
-        text="Lives and works as artist in Duesseldorf"
+        text="lives and works in Duesseldorf"
       ></BioContent>
       <ContentTitle>Contact</ContentTitle>
       <Container maxW="container.sm">
