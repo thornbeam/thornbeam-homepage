@@ -9,4 +9,4 @@ Thanks for a great tutorial on his YouTube channel: [https://www.youtube.com/wat
 
 MIT License for source code. More details: [LICENSE](./LICENSE)
 
-You're not allowed to reuse all pictorial materials on the website including artworks, photos, logos etc. Please check out the license information for these materials on impressum on the website.
+You're not allowed to reuse all pictorial materials on the website including artworks, photos, logos etc. Please check out the license information for these materials on impressum on the website. (Public folder is not uploaded.)
