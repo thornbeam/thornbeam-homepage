@@ -63,7 +63,7 @@ export default function Home() {
       </Box>
       <ContentTitle mt={{ base: "3rem" }}>Works</ContentTitle>
       <Container maxW="container.sm" mb={12}>
-        <Image src="/artworks/jpg/2020-union_spiel-v1.jpg" />
+        <Image src="/artworks/jpg/2020-union_spiel.jpg" />
       </Container>
       <ContentText fontFamily="Roboto Slab, serif" fontStyle="italic">
         Hidetoshi Mitsuzaki takes up symbols, pictograms, infographics

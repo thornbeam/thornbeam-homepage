@@ -68,7 +68,7 @@ export default function Artworks() {
 
       <ContentTitle>Publications</ContentTitle>
       <PublicationSlideshow
-        imgSrc="/artworks/publications/vlb_9783868326529_1.jpg"
+        imgSrc="/artworks/publications/cover/young_artist-cover.jpg"
         mdlSrc={YoungArtist}
         maxH="60vh"
         maxW="50%"
@@ -85,7 +85,7 @@ export default function Artworks() {
       </PublicationSlideshow>
       <ContentTitle>Selected Artworks</ContentTitle>
       <ImageModal
-        src="/artworks/jpg/darktable_exported/2021-skull.jpg"
+        src="/artworks/jpg/2021-skull.jpg"
         maxW="90%"
         maxH="50vh"
         mt={24}
@@ -93,14 +93,14 @@ export default function Artworks() {
         Skull 2021, 100 × 130 cm
       </ImageModal>
       <ImageModal
-        src="/artworks/jpg/darktable_exported/2021-ohne_titel.jpg"
+        src="/artworks/jpg/2021-ohne_titel.jpg"
         maxW="60%"
         maxH="60vh"
       >
         Nontitled 2021, 170 × 130 cm
       </ImageModal>
       <ImageModal
-        src="/artworks/jpg/2020-union_spiel-v1.jpg"
+        src="/artworks/jpg/2020-union_spiel.jpg"
         maxW="90%"
         maxH="50vh"
       >
@@ -108,7 +108,7 @@ export default function Artworks() {
       </ImageModal>
       <ImageModal
         id="small"
-        src="/artworks/jpg/darktable_exported/2020-bjt.jpg"
+        src="/artworks/jpg/2020-bjt.jpg"
         maxW="40%"
         maxH="40vh"
       >
@@ -141,7 +141,7 @@ export default function Artworks() {
             boxShadow="base"
           >
             <MenuLinkItem
-              href="/artworks/portfolio_v8.1-boegen-mittel_v2.pdf"
+              href="/artworks/pdf/portfolio_v8.2.pdf"
               isExternal
             >
               Download PDF
