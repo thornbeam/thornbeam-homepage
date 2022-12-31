@@ -1,7 +1,6 @@
 # Thornbeam's Homepage
 
 This website is very inspired by Takuya Matsuyama's homepage: [https://www.craftz.dog/](https://www.craftz.dog/)
-However, since I rewrote almost all elements, this repository is not directly forked from his one.
 
 Thanks for a great tutorial on his YouTube channel: [https://www.youtube.com/watch?v=bSMZgXzC9AA](https://www.youtube.com/watch?v=bSMZgXzC9AA)
 
