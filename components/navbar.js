@@ -80,7 +80,10 @@ const Navbar = () => {
                 <MenuLinkItem href="/">Home</MenuLinkItem>
                 <MenuLinkItem href="/artworks">Artworks</MenuLinkItem>
                 <MenuLinkItem href="/others">Others</MenuLinkItem>
-                <MenuLinkItem href="www.github.com/thornbeam/thornbeam-homepage" isExternal>
+                <MenuLinkItem
+                  href="https://github.com/thornbeam/thornbeam-homepage"
+                  isExternal
+                >
                   Source
                 </MenuLinkItem>
               </MenuList>
