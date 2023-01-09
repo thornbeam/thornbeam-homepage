@@ -147,7 +147,9 @@ export default function Test() {
             </MenuLinkItem>
           </MenuList>
         </Menu>
-        <SlideshowTest></SlideshowTest>
+        <SlideshowTest images={UnionSpiel} modalFooterText={UnionSpielFooter}>
+          Union/Spiel
+        </SlideshowTest>
       </Container>
     </Article>
   );

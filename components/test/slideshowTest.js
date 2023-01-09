@@ -7,25 +7,19 @@ import {
   Container,
   Image,
   Text,
-  useColorModaValue,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { CloseIcon, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
-import UnionSpiel from "../../components/image_urls/unionSpiel";
-
-const SlideshowTest = ({ children }) => {
+const SlideshowTest = ({
+  images = [],
+  modalFooterText = "none",
+  children,
+  ...props
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlideStyle, setCurrentSlideStyle] = useState({});
-
-  const images = [
-    "/artworks/union_spiel/2021-abschluss_web-01.jpg",
-    "/artworks/union_spiel/2021-abschluss_web-02.jpg",
-    "/artworks/union_spiel/2021-abschluss_web-03.jpg",
-    "/artworks/union_spiel/2021-abschluss_web-04.jpg",
-    "/artworks/union_spiel/2021-abschluss_web-05.jpg",
-    "/artworks/union_spiel/2021-abschluss_web-06.jpg",
-  ];
 
   useEffect(() => {
     setCurrentSlideStyle({
@@ -53,7 +47,7 @@ const SlideshowTest = ({ children }) => {
 
   return (
     <>
-      <Container maxW="container.sm">
+      <Container maxW="container.sm" {...props}>
         <AspectRatio maxW="100%" ratio={4 / 3}>
           <Box
             display="flex"
@@ -82,19 +76,52 @@ const SlideshowTest = ({ children }) => {
         {modalDisclosure == true && (
           <Box
             position="fixed"
-            zIndex="1"
+            zIndex={1}
             top="0px"
             left="0px"
-            bgColor="blackAlpha.700"
-            width="100vw"
-            height="100vh"
+            style={{ backdropFilter: "blur(5px)" }}
+            width="100%"
+            height="100%"
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
           >
-            <CloseIcon onClick={() => setModalDisclosure(false)} />
-            <Box display="flex" flexDirection="row">
-              <ChevronLeftIcon onClick={previous} />
-              <Image src={images[currentSlide]} maxW="80%" maxH="80%"/>
-              <ChevronRightIcon onClick={next} />
+            <Box align="right">
+              <CloseIcon
+                m={7}
+                boxSize={5}
+                color={useColorModeValue("black", "white")}
+                onClick={() => setModalDisclosure(false)}
+                cursor="pointer"
+              />
             </Box>
+            <Box
+              border="1px"
+              display="flex"
+              alignItems="center"
+              justifyContent="space-around"
+            >
+              <ChevronLeftIcon
+                border="1px"
+                cursor="pointer"
+                boxSize={7}
+                color={useColorModeValue("black", "white")}
+                onClick={previous}
+              />
+              <Image src={images[currentSlide]} maxW="90vw" maxH="90vh" />
+              <ChevronRightIcon
+                border="1px"
+                cursor="pointer"
+                boxSize={7}
+                color={useColorModeValue("black", "white")}
+                onClick={next}
+              />
+            </Box>
+            {modalFooterText != "none" && (
+              <Text fontSize="0.9rem" fontStyle="italic" mx={7} mb={7}>
+                {modalFooterText}
+              </Text>
+            )}
           </Box>
         )}
       </Container>
