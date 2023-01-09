@@ -79,6 +79,7 @@ const SlideshowTest = ({
             zIndex={1}
             top="0px"
             left="0px"
+            bgColor={useColorModeValue("blackAlpha.300", "none")}
             style={{ backdropFilter: "blur(5px)" }}
             width="100%"
             height="100%"
@@ -96,21 +97,18 @@ const SlideshowTest = ({
               />
             </Box>
             <Box
-              border="1px"
               display="flex"
               alignItems="center"
               justifyContent="space-around"
             >
               <ChevronLeftIcon
-                border="1px"
                 cursor="pointer"
                 boxSize={7}
                 color={useColorModeValue("black", "white")}
                 onClick={previous}
               />
-              <Image src={images[currentSlide]} maxW="90vw" maxH="90vh" />
+              <Image src={images[currentSlide]} maxW="90vw" maxH="80vh" />
               <ChevronRightIcon
-                border="1px"
                 cursor="pointer"
                 boxSize={7}
                 color={useColorModeValue("black", "white")}
@@ -118,9 +116,11 @@ const SlideshowTest = ({
               />
             </Box>
             {modalFooterText != "none" && (
-              <Text fontSize="0.9rem" fontStyle="italic" mx={7} mb={7}>
-                {modalFooterText}
-              </Text>
+              <Box>
+                <Text fontSize="0.9rem" fontStyle="italic" mx={7} mb={7}>
+                  {modalFooterText}
+                </Text>
+              </Box>
             )}
           </Box>
         )}
