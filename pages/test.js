@@ -26,7 +26,7 @@ import ImageModal from "../components/imageModal";
 import ExhibitionSlideshow from "../components/exhibitionSlideshow";
 import PublicationSlideshow from "../components/publicationSlideshow";
 
-import SlideshowTest from "../components/test/slideshow-test.js"
+import SlideshowTest from "../components/test/slideshowTest";
 
 import UnionSpiel from "../components/image_urls/unionSpiel";
 import Kosmetik from "../components/image_urls/kosmetik";
@@ -142,10 +142,7 @@ export default function Test() {
             bg={useColorModeValue("base0", "base01")}
             boxShadow="base"
           >
-            <MenuLinkItem
-              href="/artworks/pdf/portfolio_v8.2.pdf"
-              isExternal
-            >
+            <MenuLinkItem href="/artworks/pdf/portfolio_v8.2.pdf" isExternal>
               Download PDF
             </MenuLinkItem>
           </MenuList>
@@ -155,4 +152,3 @@ export default function Test() {
     </Article>
   );
 }
-

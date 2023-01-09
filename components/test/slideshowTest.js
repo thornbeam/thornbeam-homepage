@@ -80,10 +80,21 @@ const SlideshowTest = ({ children }) => {
           </Box>
         </AspectRatio>
         {modalDisclosure == true && (
-          <Box>
+          <Box
+            position="fixed"
+            zIndex="1"
+            top="0px"
+            left="0px"
+            bgColor="blackAlpha.700"
+            width="100vw"
+            height="100vh"
+          >
             <CloseIcon onClick={() => setModalDisclosure(false)} />
-            <ChevronLeftIcon onClick={previous} />
-            <ChevronRightIcon onClick={next} />
+            <Box display="flex" flexDirection="row">
+              <ChevronLeftIcon onClick={previous} />
+              <Image src={images[currentSlide]} maxW="80%" maxH="80%"/>
+              <ChevronRightIcon onClick={next} />
+            </Box>
           </Box>
         )}
       </Container>
