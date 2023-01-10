@@ -39,13 +39,25 @@ const Form = () => {
 
   return (
     <Container maxW="container.sm">
-      <FormControlNew>
+      <FormControlNew
+        isInvalid={isError}
+      >
         <FormLabel>Name</FormLabel>
         <InputNew type="name" placeholder="Your Name"></InputNew>
+        {isError && (
+          <FormHelperText>
+            Your Name is required.
+          </FormHelperText>
+        )}
       </FormControlNew>
-      <FormControlNew>
+      <FormControlNew isInvalid={isError}>
         <FormLabel>Email address</FormLabel>
         <InputNew type="email" placeholder="Your Email Address"></InputNew>
+        {isError && (
+          <FormHelperText>
+            Your email address is required.
+          </FormHelperText>
+        )}
       </FormControlNew>
       <FormControlNew>
         <FormLabel>Message</FormLabel>
@@ -54,6 +66,11 @@ const Form = () => {
           height="30vh"
           placeholder="Your Message"
         ></InputNew>
+        {isError && (
+          <FormHelperText>
+            Please insert your message.
+          </FormHelperText>
+        )}
       </FormControlNew>
       <Button
         mt={5}
