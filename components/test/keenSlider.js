@@ -164,6 +164,38 @@ export default () => {
   );
 };
 
+const ChevronLeftIconBase = ({ ...props }) => {
+  return (
+    <ChevronLeftIcon
+      position="absolute"
+      top="50%"
+      left="5px"
+      transform="translateY(-50%)"
+      width="30px"
+      height="30px"
+      fill="#fff"
+      cursor="pointer"
+      {...props}
+    />
+  );
+};
+
+const ChevronRightIconBase = ({ ...props }) => {
+  return (
+    <ChevronRightIcon
+      position="absolute"
+      top="50%"
+      right="5px"
+      left="auto"
+      transform="translateY(-50%)"
+      width="30px"
+      height="30px"
+      cursor="pointer"
+      {...props}
+    />
+  );
+};
+
 function ArrowTest(props) {
   const disabled = props.disabled ? " arrow-disabled" : "";
   return (
@@ -174,29 +206,18 @@ function ArrowTest(props) {
       } ${disabled}`}
     >
       {props.left && (
-        <ChevronLeftIcon
-          position="absolute"
-          top="50%"
-          left="5px"
-          transform="translateY(-50%)"
-          width="30px"
-          height="30px"
-          fill="#fff"
-          cursor="pointer"
-        ></ChevronLeftIcon>
+        <ChevronLeftIconBase color="whiteAlpha.800"></ChevronLeftIconBase>
       )}
+
       {!props.left && (
-        <ChevronRightIcon
-          position="absolute"
-          top="50%"
-          right="5px"
-          left="auto"
-          transform="translateY(-50%)"
-          width="30px"
-          height="30px"
-          fill="#fff"
-          cursor="pointer"
-        ></ChevronRightIcon>
+        <ChevronRightIconBase color="whiteAlpha.800"></ChevronRightIconBase>
+      )}
+      {props.left && disabled && (
+        <ChevronLeftIconBase color="blackAlpha.300"></ChevronLeftIconBase>
+      )}
+
+      {!props.left && disabled && (
+        <ChevronRightIconBase color="blackAlpha.300"></ChevronRightIconBase>
       )}
     </div>
   );
