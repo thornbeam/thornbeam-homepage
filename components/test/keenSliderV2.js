@@ -16,7 +16,7 @@ import { CloseIcon, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 export default ({
   images = [],
   children,
-  modalFooterText = "none",
+  modalFooterText = null,
   ...props
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,6 +40,65 @@ export default ({
   }, [images, currentSlide]);
 
   const [modalDisclosure, setModalDisclosure] = useState(false);
+
+  const ChevronLeftIconBase = ({ ...props }) => {
+    return (
+      <ChevronLeftIcon
+        position="absolute"
+        top="44%"
+        left="5px"
+        transform="translateY(-44%)"
+        width="30px"
+        height="30px"
+        fill="#fff"
+        cursor="pointer"
+        {...props}
+      />
+    );
+  };
+
+  const ChevronRightIconBase = ({ ...props }) => {
+    return (
+      <ChevronRightIcon
+        position="absolute"
+        top="44%"
+        right="5px"
+        left="auto"
+        transform="translateY(-44%)"
+        width="30px"
+        height="30px"
+        cursor="pointer"
+        {...props}
+      />
+    );
+  };
+
+  function Arrow(props) {
+    const disabled = props.disabled ? " arrow-disabled" : "";
+    return (
+      <div
+        onClick={props.onClick}
+        className={`arrow ${
+          props.left ? "arrow--left" : "arrow--right"
+        } ${disabled}`}
+      >
+        {props.left && (
+          <ChevronLeftIconBase color="whiteAlpha.800"></ChevronLeftIconBase>
+        )}
+
+        {!props.left && (
+          <ChevronRightIconBase color="whiteAlpha.800"></ChevronRightIconBase>
+        )}
+        {props.left && disabled && (
+          <ChevronLeftIconBase color="blackAlpha.300"></ChevronLeftIconBase>
+        )}
+
+        {!props.left && disabled && (
+          <ChevronRightIconBase color="blackAlpha.300"></ChevronRightIconBase>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -83,53 +142,48 @@ export default ({
         >
           <Box
             w="100%"
-            h="5vh"
+            h="7vh"
             display="flex"
             justifyContent="right"
             alignItems="center"
           >
             <CloseIcon
-              mr={5}
+              mr={7}
               color={useColorModeValue("blackAlpha.700", "white")}
               onClick={() => setModalDisclosure(false)}
               cursor="pointer"
             />
           </Box>
-          <Box
-            ref={sliderRef}
-            className="keen-slider"
-            w="100%"
-            h="80vh"
-          >
-              {images.map((src, i) => (
-                <Image
-                  className="keen-slider__slide"
-                  src={src}
-                  objectFit="contain"
-                ></Image>
-              ))}
-            </Box>
-            {loaded && instanceRef.current && (
-              <>
-                <Arrow
-                  left
-                  onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.prev()
-                  }
-                  disabled={currentSlide === 0}
-                />
+          <Box ref={sliderRef} className="keen-slider" w="100%" h="80vh">
+            {images.map((src, i) => (
+              <Image
+                className="keen-slider__slide"
+                src={src}
+                objectFit="contain"
+              ></Image>
+            ))}
+          </Box>
+          {loaded && instanceRef.current && (
+            <>
+              <Arrow
+                left
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+                disabled={currentSlide === 0}
+              />
 
-                <Arrow
-                  onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.next()
-                  }
-                  disabled={
-                    currentSlide ===
-                    instanceRef.current.track.details.slides.length - 1
-                  }
-                />
-              </>
-            )}
+              <Arrow
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.next()
+                }
+                disabled={
+                  currentSlide ===
+                  instanceRef.current.track.details.slides.length - 1
+                }
+              />
+            </>
+          )}
           {loaded && instanceRef.current && (
             <Box
               className="dots"
@@ -164,7 +218,8 @@ export default ({
             justifyContent="right"
             alignItems="center"
           >
-            <Text mr={5}>TESTEXT</Text>
+
+            <Text mr={7} fontSize="0.9rem" fontStyle="italic">{modalFooterText}</Text>
           </Box>
         </VStack>
       )}
@@ -191,83 +246,3 @@ export default ({
     </>
   );
 };
-
-const ChevronLeftIconBase = ({ ...props }) => {
-  return (
-    <ChevronLeftIcon
-      position="absolute"
-      top="44%"
-      left="5px"
-      transform="translateY(-44%)"
-      width="30px"
-      height="30px"
-      fill="#fff"
-      cursor="pointer"
-      {...props}
-    />
-  );
-};
-
-const ChevronRightIconBase = ({ ...props }) => {
-  return (
-    <ChevronRightIcon
-      position="absolute"
-      top="44%"
-      right="5px"
-      left="auto"
-      transform="translateY(-44%)"
-      width="30px"
-      height="30px"
-      cursor="pointer"
-      {...props}
-    />
-  );
-};
-
-function Arrow(props) {
-  const disabled = props.disabled ? " arrow-disabled" : "";
-  return (
-    <div
-      onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabled}`}
-    >
-      {props.left && (
-        <ChevronLeftIconBase color="whiteAlpha.800"></ChevronLeftIconBase>
-      )}
-
-      {!props.left && (
-        <ChevronRightIconBase color="whiteAlpha.800"></ChevronRightIconBase>
-      )}
-      {props.left && disabled && (
-        <ChevronLeftIconBase color="blackAlpha.300"></ChevronLeftIconBase>
-      )}
-
-      {!props.left && disabled && (
-        <ChevronRightIconBase color="blackAlpha.300"></ChevronRightIconBase>
-      )}
-    </div>
-  );
-}
-
-// function ArrowLegacy(props) {
-//   const disabeld = props.disabled ? " arrow--disabled" : "";
-//   return (
-//     <svg
-//       onClick={props.onClick}
-//       className={`arrow ${
-//         props.left ? "arrow--left" : "arrow--right"
-//       } ${disabeld}`}
-//       xmlns="http://www.w3.org/2000/svg"
-//       viewBox="0 0 24 24"
-//     >
-//       {props.left && (
-//         <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-//       )}
-//       {!props.left && (
-//         <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-//       )}
-//     </svg>
-//   );
-// }

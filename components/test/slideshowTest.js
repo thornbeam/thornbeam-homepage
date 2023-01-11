@@ -14,7 +14,7 @@ import { CloseIcon, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const SlideshowTest = ({
   images = [],
-  modalFooterText = "none",
+  modalFooterText = null,
   children,
   ...props
 }) => {
@@ -115,7 +115,7 @@ const SlideshowTest = ({
                 onClick={next}
               />
             </Box>
-            {modalFooterText != "none" && (
+            {modalFooterText != null && (
               <Box>
                 <Text fontSize="0.9rem" fontStyle="italic" mx={7} mb={7}>
                   {modalFooterText}
