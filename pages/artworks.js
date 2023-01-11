@@ -23,7 +23,7 @@ import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ImageModal from "../components/imageModal";
-import ExhibitionSlideshow from "../components/exhibitionSlideshow";
+import ExhibitionSlideshow from "../components/exhibitionSlideshowV1";
 import PublicationSlideshow from "../components/publicationSlideshow";
 
 import UnionSpiel from "../components/image_urls/unionSpiel";
