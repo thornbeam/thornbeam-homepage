@@ -10,7 +10,7 @@ const DerBogenImAugeExhibitionFooter = (
       href="https://www.kunst-im-tunnel.de/exhibition/der-bogen-im-auge/"
       isExternal
     >
-      More details
+      Venue website
     </Link>
     <br />
     Photos: Ivo Faber
@@ -26,7 +26,7 @@ const KosmetikExhibitionFooter = (
       href="https://nails-room.com/kosmetik/"
       isExternal
     >
-      More details
+      Venue website
     </Link>
     <br />
     Photos: Kai Werner Schmidt
@@ -76,7 +76,7 @@ const DerBogenImAugePublicationData = (
     <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
       Catalogue
       <br />
-      26,0 cm x 20,0 cm
+      27,0 cm x 20,0 cm
       <br />
     </Text>
     <Text mt={3} fontFamily="Roboto Slab, serif" fontStyle="italic">
@@ -105,7 +105,7 @@ const NewRosesFooter = (
       href="https://www.knappbjoern.de/"
       isExternal
     >
-      To Homepage of artist
+      Artist website
     </Link>
     <br />
     Photos: Hidetoshi Mitsuzaki
@@ -129,7 +129,7 @@ const NailsFooter = (
       href="https://nails-room.com/"
       isExternal
     >
-      To homepage of Nails projectroom
+      Venue website
     </Link>
     <br />
     Photos: Hidetoshi Mitsuzaki
@@ -145,7 +145,7 @@ const BffOrEverFooter = (
       href="https://nails-room.com/bfforever"
       isExternal
     >
-      To website of exhibition
+      Venue website
     </Link>
     <br />
     Photos: Hidetoshi Mitsuzaki
@@ -161,7 +161,7 @@ const MarpatFooter = (
       href="http://klassescheibitz.de/ausstellungen/"
       isExternal
     >
-      To website of exhibition
+      Venue website
     </Link>
     <br />
     Photos: Hidetoshi Mitsuzaki

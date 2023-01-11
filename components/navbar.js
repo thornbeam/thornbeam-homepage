@@ -41,12 +41,12 @@ const Navbar = () => {
           display={{ base: "none", md: "flex" }}
           direction={{ md: "row" }}
           fontSize="0.9rem"
-          spacing="2vw"
+          spacing="1.5vw"
           alignItems="center"
         >
           <LinkItem href="/">Home</LinkItem>
           <LinkItem href="/artworks">Artworks</LinkItem>
-          <LinkItem href="/others">Others</LinkItem>
+          <LinkItem href="/others">Other Works</LinkItem>
           <LinkItem
             href="https://github.com/thornbeam/thornbeam-homepage"
             isExternal
@@ -79,7 +79,7 @@ const Navbar = () => {
               >
                 <MenuLinkItem href="/">Home</MenuLinkItem>
                 <MenuLinkItem href="/artworks">Artworks</MenuLinkItem>
-                <MenuLinkItem href="/others">Others</MenuLinkItem>
+                <MenuLinkItem href="/others">Other Works</MenuLinkItem>
                 <MenuLinkItem
                   href="https://github.com/thornbeam/thornbeam-homepage"
                   isExternal
