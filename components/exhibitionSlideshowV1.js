@@ -17,15 +17,13 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
-    initial: currentSlide,
+    initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
+      setCurrentSlide(0);
       setLoaded(true);
-    },
-    destroyed() {
-      setLoaded(false);
     },
   });
 
