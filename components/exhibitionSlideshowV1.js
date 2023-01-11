@@ -13,21 +13,19 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { CloseIcon, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
-export default ({
-  images,
-  children,
-  modalFooterText = null,
-  ...props
-}) => {
+export default ({ images, children, modalFooterText = null, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
+    initial: currentSlide,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
       setLoaded(true);
+    },
+    destroyed() {
+      setLoaded(false);
     },
   });
 
@@ -218,8 +216,9 @@ export default ({
             justifyContent="right"
             alignItems="center"
           >
-
-            <Text mr={7} fontSize="0.9rem" fontStyle="italic">{modalFooterText}</Text>
+            <Text mr={7} fontSize="0.9rem" fontStyle="italic">
+              {modalFooterText}
+            </Text>
           </Box>
         </VStack>
       )}
