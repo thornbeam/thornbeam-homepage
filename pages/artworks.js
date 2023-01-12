@@ -23,7 +23,7 @@ import ContentTitle from "../components/contentTitle";
 import ContentText from "../components/contentText";
 import LinkItem from "../components/linkItem";
 import ImageModal from "../components/imageModal";
-import ExhibitionSlideshow from "../components/exhibitionSlideshowV1";
+import ExhibitionSlideshow from "../components/exhibitionSlideshow";
 import PublicationSlideshow from "../components/publicationSlideshow";
 
 import UnionSpiel from "../components/image_urls/unionSpiel";
@@ -68,16 +68,16 @@ export default function Artworks() {
 
       <ContentTitle>Publications</ContentTitle>
       <PublicationSlideshow
-        imgSrc="/artworks/publications/cover/young_artist-cover.jpg"
-        mdlSrc={YoungArtist}
+        cover="/artworks/publications/cover/young_artist-cover.jpg"
+        images={YoungArtist}
         maxH="60vh"
         maxW="50%"
       >
         {YoungArtistPublicationData}
       </PublicationSlideshow>
       <PublicationSlideshow
-        imgSrc="/artworks/publications/der_bogen_im_auge/der_bogen_im_auge_1.jpg"
-        mdlSrc={DerBogenImAugePublication}
+        cover="/artworks/publications/der_bogen_im_auge/der_bogen_im_auge_1.jpg"
+        images={DerBogenImAugePublication}
         maxH="60vh"
         maxW="50%"
       >

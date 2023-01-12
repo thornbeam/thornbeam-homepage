@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   AspectRatio,
   Box,
@@ -26,14 +26,6 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
       setLoaded(true);
     },
   });
-
-  const [currentSlideStyle, setCurrentSlideStyle] = useState({});
-
-  useEffect(() => {
-    setCurrentSlideStyle({
-      backgroundImage: "url('" + images[currentSlide] + "')",
-    });
-  }, [images, currentSlide]);
 
   const [modalDisclosure, setModalDisclosure] = useState(false);
 
@@ -108,7 +100,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
             fontWeight="bold"
             fontSize="1.2rem"
             color="whiteAlpha.900"
-            style={currentSlideStyle}
+            backgroundImage={images[0]}
             bgPosition="center"
             bgRepeat="no-repeat"
             bgSize="cover"
