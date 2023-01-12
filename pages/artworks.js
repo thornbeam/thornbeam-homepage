@@ -68,16 +68,16 @@ export default function Artworks() {
 
       <ContentTitle>Publications</ContentTitle>
       <PublicationSlideshow
-        imgSrc="/artworks/publications/cover/young_artist-cover.jpg"
-        mdlSrc={YoungArtist}
+        cover="/artworks/publications/cover/young_artist-cover.jpg"
+        images={YoungArtist}
         maxH="60vh"
         maxW="50%"
       >
         {YoungArtistPublicationData}
       </PublicationSlideshow>
       <PublicationSlideshow
-        imgSrc="/artworks/publications/der_bogen_im_auge/der_bogen_im_auge_1.jpg"
-        mdlSrc={DerBogenImAugePublication}
+        cover="/artworks/publications/der_bogen_im_auge/der_bogen_im_auge_1.jpg"
+        images={DerBogenImAugePublication}
         maxH="60vh"
         maxW="50%"
       >

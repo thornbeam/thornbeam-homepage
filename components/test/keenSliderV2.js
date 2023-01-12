@@ -13,14 +13,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { CloseIcon, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
-export default ({
-  cover,
-  images,
-  maxH,
-  maxW,
-  children,
-  ...props
-}) => {
+export default ({ images, children, modalFooterText = null, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -31,9 +24,6 @@ export default ({
     created() {
       setCurrentSlide(0);
       setLoaded(true);
-    },
-    destroyed() {
-      setLoaded(false);
     },
   });
 
@@ -100,19 +90,32 @@ export default ({
 
   return (
     <>
-      <Container mt={{ base: 12, md: 24 }} maxW="container.sm" {...props}>
-        {maxH && maxW && (
-          <Image
-            onClick={() => setModalDisclosure(true)}
+      <Container maxW="container.sm" {...props}>
+        <AspectRatio maxW="100%" ratio={4 / 3}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            fontWeight="bold"
+            fontSize="1.2rem"
+            color="whiteAlpha.900"
+            backgroundImage={images[0]}
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+            textTransform="uppercase"
+            letterSpacing="1px"
             cursor="pointer"
-            src={cover}
-            maxH={maxH}
-            maxW={maxW}
-            fit="contain"
-            align="left"
-          />
-        )}
-        {children}
+            filter="grayscale(100%)"
+            _hover={{ filter: "none" }}
+            transition="filter 0.3s"
+            textAlign="center"
+            onClick={() => setModalDisclosure(true)}
+          >
+            {children}
+          </Box>
+        </AspectRatio>
       </Container>
       {modalDisclosure == true && (
         <VStack
@@ -139,7 +142,7 @@ export default ({
               cursor="pointer"
             />
           </Box>
-          <Box ref={sliderRef} className="keen-slider" w="100%" h="88vh">
+          <Box ref={sliderRef} className="keen-slider" w="100%" h="80vh">
             {images.map((src, i) => (
               <Image
                 className="keen-slider__slide"
@@ -196,6 +199,17 @@ export default ({
               })}
             </Box>
           )}
+          <Box
+            h="10vh"
+            w="100%"
+            display="flex"
+            justifyContent="right"
+            alignItems="center"
+          >
+            <Text mr={7} fontSize="0.9rem" fontStyle="italic">
+              {modalFooterText}
+            </Text>
+          </Box>
         </VStack>
       )}
       <style jsx>{`
