@@ -27,7 +27,7 @@ const Navbar = () => {
       as="nav"
       w="100%"
       py={3}
-      style={{ backdropFilter: "blur(20px)" }}
+      css={{ backdropFilter: "blur(10px)" }}
       zIndex={1}
     >
       <Container

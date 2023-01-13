@@ -59,8 +59,8 @@ const ImageModal = ({
         >
           <ModalOverlay />
           <ModalContent
-            bg={useColorModeValue("blackAlpha.400", "whiteAlpha.200")}
-            color={useColorModeValue("whiteAlpha.900", "whiteAlpha.900")}
+            bg={useColorModeValue("blackAlpha.400", "none")}
+            color="whiteAlpha.900"
             backdropFilter="auto"
             backdropBlur="7px"
           >

@@ -13,14 +13,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { CloseIcon, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
-export default ({
-  cover,
-  images,
-  maxH,
-  maxW,
-  children,
-  ...props
-}) => {
+export default ({ cover, images, maxH, maxW, children, ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -43,13 +36,13 @@ export default ({
     return (
       <ChevronLeftIcon
         position="absolute"
-        top="44%"
+        top="49%"
         left="5px"
-        transform="translateY(-44%)"
-        width="30px"
-        height="30px"
-        fill="#fff"
+        transform="translateY(-49%)"
+        boxSize={{ base: "0px", md: "40px" }}
         cursor="pointer"
+        _hover={{ bgColor: "whiteAlpha.400" }}
+        borderRadius="7px"
         {...props}
       />
     );
@@ -59,13 +52,14 @@ export default ({
     return (
       <ChevronRightIcon
         position="absolute"
-        top="44%"
+        top="49%"
         right="5px"
         left="auto"
-        transform="translateY(-44%)"
-        width="30px"
-        height="30px"
+        transform="translateY(-49%)"
+        boxSize={{ base: "0px", md: "40px" }}
         cursor="pointer"
+        _hover={{ bgColor: "whiteAlpha.400" }}
+        borderRadius="7px"
         {...props}
       />
     );
@@ -121,7 +115,7 @@ export default ({
           left="0px"
           zIndex={1}
           bgColor={useColorModeValue("blackAlpha.300", "none")}
-          style={{ backdropFilter: "blur(5px)" }}
+          css={{ backdropFilter: "blur(10px)" }}
           width="100%"
           height="100%"
         >
@@ -133,10 +127,15 @@ export default ({
             alignItems="center"
           >
             <CloseIcon
-              mr={7}
-              color={useColorModeValue("blackAlpha.700", "white")}
+              m={{ base: 3, md: 7 }}
+              width="30px"
+              height="30px"
+              p="7px"
+              color="whiteAlpha.900"
               onClick={() => setModalDisclosure(false)}
               cursor="pointer"
+              _hover={{ bgColor: "whiteAlpha.400" }}
+              borderRadius="7px"
             />
           </Box>
           <Box ref={sliderRef} className="keen-slider" w="100%" h="88vh">

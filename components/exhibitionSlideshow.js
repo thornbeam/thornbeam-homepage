@@ -26,8 +26,8 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
       setLoaded(true);
     },
     destroyed() {
-      setLoaded(false)
-    }
+      setLoaded(false);
+    },
   });
 
   const [modalDisclosure, setModalDisclosure] = useState(false);
@@ -39,10 +39,10 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
         top="44%"
         left="5px"
         transform="translateY(-44%)"
-        width="30px"
-        height="30px"
-        fill="#fff"
+        boxSize={{ base: "0px", md: "40px" }}
         cursor="pointer"
+        _hover={{ bgColor: "whiteAlpha.400" }}
+        borderRadius="7px"
         {...props}
       />
     );
@@ -56,9 +56,10 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
         right="5px"
         left="auto"
         transform="translateY(-44%)"
-        width="30px"
-        height="30px"
+        boxSize={{ base: "0px", md: "40px" }}
         cursor="pointer"
+        _hover={{ bgColor: "whiteAlpha.400" }}
+        borderRadius="7px"
         {...props}
       />
     );
@@ -126,8 +127,8 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
           top="0px"
           left="0px"
           zIndex={1}
-          bgColor={useColorModeValue("blackAlpha.300", "none")}
-          style={{ backdropFilter: "blur(5px)" }}
+          bgColor={useColorModeValue("blackAlpha.600", "blackAlpha.300")}
+          css={{ backdropFilter: "blur(10px)" }}
           width="100%"
           height="100%"
         >
@@ -139,10 +140,15 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
             alignItems="center"
           >
             <CloseIcon
-              mr={7}
-              color={useColorModeValue("blackAlpha.700", "white")}
+              m={{ base: 3, md: 7 }}
+              width="30px"
+              height="30px"
+              p="7px"
+              color="whiteAlpha.900"
               onClick={() => setModalDisclosure(false)}
               cursor="pointer"
+              _hover={{ bgColor: "whiteAlpha.400" }}
+              borderRadius="7px"
             />
           </Box>
           <Box ref={sliderRef} className="keen-slider" w="100%" h="80vh">
@@ -209,7 +215,12 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
             justifyContent="right"
             alignItems="center"
           >
-            <Text mr={7} fontSize="0.9rem" fontStyle="italic">
+            <Text
+              mr={7}
+              fontSize="0.9rem"
+              fontStyle="italic"
+              color="whiteAlpha.900"
+            >
               {modalFooterText}
             </Text>
           </Box>
