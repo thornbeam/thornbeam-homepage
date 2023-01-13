@@ -214,7 +214,7 @@ export default ({ cover, images, maxH, maxW, children, ...props }) => {
         }
 
         .dot.active {
-          background: rgba(0, 0, 0, 0.6);
+          background: rgba(70, 70, 70, 0.6);
         }
       `}</style>
     </>

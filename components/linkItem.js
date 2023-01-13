@@ -12,7 +12,7 @@ export default function LinkItem({ href, children, ...props }) {
       fontSize="1.1rem"
       letterSpacing={-1}
       bg={useColorModeValue("base0", "base02")}
-      _hover={{ color: useColorModeValue("#f8f4ed", "#16181d"), backgroundColor: useColorModeValue("base02", "base3") }}
+      _hover={{ color: "base0", backgroundColor: useColorModeValue("base02", "base00") }}
       {...props}
     >
       {children}
