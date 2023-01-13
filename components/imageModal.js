@@ -19,20 +19,27 @@ import {
 
 function ModalImage(id, src) {
   if (id === "small") {
-    return <Image src={src} width="50%" height="50vh" fit="contain" />;
+    return (
+      <Image
+        src={src}
+        width={{ base: "70%", md: "50%" }}
+        height={{ base: "70vh", md: "50vh" }}
+        fit="contain"
+      />
+    );
   } else {
-    return <Image src={src} width="90%" height="80vh" fit="contain" />;
+    return (
+      <Image
+        src={src}
+        width={{ base: "100%", md: "80%" }}
+        height="80vh"
+        fit="contain"
+      />
+    );
   }
 }
 
-const ImageModal = ({
-  id = "",
-  src,
-  maxH,
-  maxW,
-  children,
-  ...props
-}) => {
+const ImageModal = ({ id = "", src, maxH, maxW, children, ...props }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
