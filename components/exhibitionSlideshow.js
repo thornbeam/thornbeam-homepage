@@ -216,7 +216,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
             alignItems="center"
           >
             <Text
-              mr={7}
+              mr={{ base: 3, md: 7 }}
               fontSize="0.9rem"
               fontStyle="italic"
               color="whiteAlpha.900"
