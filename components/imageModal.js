@@ -64,23 +64,30 @@ const ImageModal = ({ id = "", src, maxH, maxW, children, ...props }) => {
           size="full"
           blockScrollOnMount={false}
         >
-          <ModalOverlay />
+          <ModalOverlay bg="none" />
           <ModalContent
-            bg={useColorModeValue("blackAlpha.400", "none")}
+            bg="none"
             color="whiteAlpha.900"
             backdropFilter="auto"
             backdropBlur="7px"
           >
-            <ModalCloseButton />
+            <ModalCloseButton
+              color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
+            />
             <ModalBody
               display="flex"
               justifyContent="center"
               alignItems="center"
+              p={0}
             >
               {ModalImage(id, src)}
             </ModalBody>
             <ModalFooter>
-              <Text fontSize="0.9rem" fontStyle="italic">
+              <Text
+                fontSize="0.9rem"
+                fontStyle="italic"
+                color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
+              >
                 {children}
               </Text>
             </ModalFooter>
