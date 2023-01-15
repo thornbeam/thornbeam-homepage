@@ -117,7 +117,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
             textTransform="uppercase"
             letterSpacing="1px"
             cursor="pointer"
-            filter="grayscale(100%)"
+            filter={{ md: "grayscale(100%)" }}
             _hover={{ filter: "none" }}
             transition="filter 0.3s"
             textAlign="center"
