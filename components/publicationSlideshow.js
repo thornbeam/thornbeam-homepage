@@ -82,11 +82,17 @@ export default ({ cover, images, maxH, maxW, children, ...props }) => {
           <ChevronRightIconBase color="whiteAlpha.800"></ChevronRightIconBase>
         )}
         {props.left && disabled && (
-          <ChevronLeftIconBase color="blackAlpha.300"></ChevronLeftIconBase>
+          <ChevronLeftIconBase
+            color="blackAlpha.300"
+            _hover={{ bgColor: "none", cursor: "default" }}
+          ></ChevronLeftIconBase>
         )}
 
         {!props.left && disabled && (
-          <ChevronRightIconBase color="blackAlpha.300"></ChevronRightIconBase>
+          <ChevronRightIconBase
+            color="blackAlpha.300"
+            _hover={{ bgColor: "none", cursor: "default" }}
+          ></ChevronRightIconBase>
         )}
       </div>
     );
@@ -131,7 +137,7 @@ export default ({ cover, images, maxH, maxW, children, ...props }) => {
               width="30px"
               height="30px"
               p="7px"
-              color="whiteAlpha.900"
+              color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
               onClick={() => setModalDisclosure(false)}
               cursor="pointer"
               _hover={{ bgColor: "whiteAlpha.400" }}

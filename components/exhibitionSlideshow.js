@@ -82,11 +82,17 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
           <ChevronRightIconBase color="whiteAlpha.800"></ChevronRightIconBase>
         )}
         {props.left && disabled && (
-          <ChevronLeftIconBase color="blackAlpha.300"></ChevronLeftIconBase>
+          <ChevronLeftIconBase
+            color="blackAlpha.300"
+            _hover={{ bgColor: "none", cursor: "default" }}
+          ></ChevronLeftIconBase>
         )}
 
         {!props.left && disabled && (
-          <ChevronRightIconBase color="blackAlpha.300"></ChevronRightIconBase>
+          <ChevronRightIconBase
+            color="blackAlpha.300"
+            _hover={{ bgColor: "none", cursor: "default" }}
+          ></ChevronRightIconBase>
         )}
       </div>
     );
@@ -127,7 +133,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
           top="0px"
           left="0px"
           zIndex={1}
-          bgColor={useColorModeValue("blackAlpha.600", "blackAlpha.300")}
+          bgColor="none"
           css={{ backdropFilter: "blur(10px)" }}
           width="100%"
           height="100%"
@@ -144,7 +150,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
               width="30px"
               height="30px"
               p="7px"
-              color="whiteAlpha.900"
+              color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
               onClick={() => setModalDisclosure(false)}
               cursor="pointer"
               _hover={{ bgColor: "whiteAlpha.400" }}
@@ -219,7 +225,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
               mr={{ base: 3, md: 7 }}
               fontSize="0.9rem"
               fontStyle="italic"
-              color="whiteAlpha.900"
+              color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
             >
               {modalFooterText}
             </Text>
@@ -243,7 +249,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
         }
 
         .dot.active {
-          background: rgba(70,70,70, 0.6);
+          background: rgba(70, 70, 70, 0.6);
         }
       `}</style>
     </>
