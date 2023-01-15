@@ -101,7 +101,7 @@ export default ({ images, children, modalFooterText = null, ...props }) => {
   return (
     <>
       <Container maxW="container.sm" {...props}>
-        <AspectRatio maxW="100%" ratio={4 / 3}>
+        <AspectRatio maxW="100%" maxH="60vh" ratio={4 / 3}>
           <Box
             display="flex"
             flexDirection="column"
