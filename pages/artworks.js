@@ -141,7 +141,7 @@ export default function Artworks() {
             boxShadow="base"
           >
             <MenuLinkItem
-              href="/artworks/pdf/portfolio_v8.2.pdf"
+              href="/artworks/pdf/portfolio_v8.3.pdf"
               isExternal
             >
               Download PDF
