@@ -77,15 +77,76 @@ const Navbar = () => {
                 bg={useColorModeValue("base0", "base01")}
                 boxShadow="base"
               >
-                <MenuLinkItem href="/">Home</MenuLinkItem>
-                <MenuLinkItem href="/artworks">Artworks</MenuLinkItem>
-                <MenuLinkItem href="/others">Other Works</MenuLinkItem>
-                <MenuLinkItem
-                  href="https://github.com/thornbeam/thornbeam-homepage"
+                <MenuItem
+                  as={NextLink}
+                  p={2.5}
+                  borderRadius="5px"
+                  display="block"
+                  textAlign="center"
+                  fontSize="1.1rem"
+                  letterSpacing={-1}
+                  bg={useColorModeValue("base0", "base01")}
+                  _hover={{
+                    bg: useColorModeValue("base02", "base00"),
+                    color: "white",
+                  }}
+                  href="/"
+                >
+                  Home
+                </MenuItem>
+                <MenuItem
+                  as={NextLink}
+                  p={2.5}
+                  borderRadius="5px"
+                  display="block"
+                  textAlign="center"
+                  fontSize="1.1rem"
+                  letterSpacing={-1}
+                  bg={useColorModeValue("base0", "base01")}
+                  _hover={{
+                    bg: useColorModeValue("base02", "base00"),
+                    color: "white",
+                  }}
+                  href="/artworks"
+                >
+                  Artworks
+                </MenuItem>
+                <MenuItem
+                  as={NextLink}
+                  p={2.5}
+                  borderRadius="5px"
+                  display="block"
+                  textAlign="center"
+                  fontSize="1.1rem"
+                  letterSpacing={-1}
+                  bg={useColorModeValue("base0", "base01")}
+                  _hover={{
+                    bg: useColorModeValue("base02", "base00"),
+                    color: "white",
+                  }}
+                  href="/others"
+                >
+                  Other Works
+                </MenuItem>
+                <MenuItem
+                  as={Link}
                   isExternal
+                  p={2.5}
+                  borderRadius="5px"
+                  display="block"
+                  textAlign="center"
+                  fontSize="1.1rem"
+                  letterSpacing={-1}
+                  bg={useColorModeValue("base0", "base01")}
+                  _hover={{
+                    bg: useColorModeValue("base02", "base00"),
+                    color: "white",
+                    textDecoration: "none"
+                  }}
+                  href="https://www.github.com/thornbeam/thornbeam-homepage"
                 >
                   Source
-                </MenuLinkItem>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
