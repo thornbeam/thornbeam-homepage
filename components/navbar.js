@@ -18,6 +18,7 @@ import MenuLinkItem from "../components/menuLinkItem";
 import Logo from "./logo";
 import ToggleButton from "./toggleButton";
 import { IoLogoGithub } from "react-icons/io5";
+import LocaleSwitcher from "../components/localeSwitcher.js"
 
 const Navbar = () => {
   return (
@@ -60,6 +61,7 @@ const Navbar = () => {
         </Stack>
         <Box className="navbarRight" display="flex">
           <ToggleButton />
+          <LocaleSwitcher ml={1} />
           <Box display={{ base: "block", md: "none" }}>
             <Menu>
               <MenuButton
