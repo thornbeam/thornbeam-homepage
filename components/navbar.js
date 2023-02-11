@@ -77,74 +77,29 @@ const Navbar = () => {
                 bg={useColorModeValue("base0", "base01")}
                 boxShadow="base"
               >
-                <MenuItem
-                  as={NextLink}
-                  p={2.5}
-                  borderRadius="5px"
-                  display="block"
-                  textAlign="center"
-                  fontSize="1.1rem"
-                  letterSpacing={-1}
-                  bg={useColorModeValue("base0", "base01")}
-                  _hover={{
-                    bg: useColorModeValue("base02", "base00"),
-                    color: "white",
-                  }}
-                  href="/"
-                >
-                  Home
-                </MenuItem>
-                <MenuItem
-                  as={NextLink}
-                  p={2.5}
-                  borderRadius="5px"
-                  display="block"
-                  textAlign="center"
-                  fontSize="1.1rem"
-                  letterSpacing={-1}
-                  bg={useColorModeValue("base0", "base01")}
-                  _hover={{
-                    bg: useColorModeValue("base02", "base00"),
-                    color: "white",
-                  }}
-                  href="/artworks"
-                >
-                  Artworks
-                </MenuItem>
-                <MenuItem
-                  as={NextLink}
-                  p={2.5}
-                  borderRadius="5px"
-                  display="block"
-                  textAlign="center"
-                  fontSize="1.1rem"
-                  letterSpacing={-1}
-                  bg={useColorModeValue("base0", "base01")}
-                  _hover={{
-                    bg: useColorModeValue("base02", "base00"),
-                    color: "white",
-                  }}
-                  href="/others"
-                >
-                  Other Works
-                </MenuItem>
+                <MenuLinkItem href="/">Home</MenuLinkItem>
+                <MenuLinkItem href="/artworks">Artworks</MenuLinkItem>
+                <MenuLinkItem href="/others">Other Works</MenuLinkItem>
                 <MenuItem
                   as={Link}
                   isExternal
                   p={2.5}
                   borderRadius="5px"
-                  display="block"
-                  textAlign="center"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  style={{ gap: 5 }}
                   fontSize="1.1rem"
                   letterSpacing={-1}
                   bg={useColorModeValue("base0", "base01")}
                   _hover={{
                     bg: useColorModeValue("base02", "base00"),
                     color: "white",
-                    textDecoration: "none"
+                    textDecoration: "none",
                   }}
                   href="https://www.github.com/thornbeam/thornbeam-homepage"
                 >
+                  <IoLogoGithub />
                   Source
                 </MenuItem>
               </MenuList>
